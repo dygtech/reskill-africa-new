@@ -6,6 +6,7 @@ import { TournamentSection } from "@/components/TournamentSection";
 import { StrategicPillars } from "@/components/StrategicPillars";
 import { OurImpact } from "@/components/OurImpact";
 import { Footer } from "@/components/Footer";
+import { ActionButton } from "@/components/ActionButton";
 
 export default function Home() {
   return (
@@ -37,19 +38,13 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-6">
-              <button className="group flex items-center justify-between gap-6 hover:gap-12 bg-white text-black px-1.5 py-1.5 pl-6 rounded-full font-sans text-[15px] font-medium transition-all duration-300 shadow-lg w-full sm:w-auto">
-                <span>Explore Skilldustry</span>
-                <div className="bg-[#9c2525] text-white p-2.5 rounded-full flex items-center justify-center">
-                  <ArrowRight size={18} className="transform -rotate-45 transition-transform duration-300 group-hover:rotate-0" strokeWidth={1} />
-                </div>
-              </button>
+              <ActionButton variant="primary">
+                Explore Skilldustry
+              </ActionButton>
 
-              <button className="group flex items-center justify-between gap-6 hover:gap-12 bg-white text-black px-1.5 py-1.5 pl-6 rounded-full font-sans text-[15px] font-medium transition-all duration-300 shadow-lg w-full sm:w-auto">
-                <span>Explore Skill Passport</span>
-                <div className="bg-[#9c2525] text-white p-2.5 rounded-full flex items-center justify-center">
-                  <ArrowRight size={18} className="transform -rotate-45 transition-transform duration-300 group-hover:rotate-0" strokeWidth={1} />
-                </div>
-              </button>
+              <ActionButton variant="primary">
+                Explore Skill Passport
+              </ActionButton>
             </div>
           </div>
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, BrainCircuit } from "lucide-react";
+import { ActionButton } from "@/components/ActionButton";
 
 export function TournamentSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -75,12 +75,9 @@ export function TournamentSection() {
               Participants are evaluated on their ability to deliver viable solutions under real-world conditions. High performers progress into pathways connecting them with employment, supplier opportunities, and venture development, creating a live system for identifying execution-ready talent at scale.
             </p>
             <div>
-              <button className="group flex items-center justify-between gap-6 bg-[#9c2525] text-white px-1.5 py-1.5 pl-6 rounded-full hover:gap-12 font-sans text-[15px] font-medium transition-all duration-300 hover:bg-[#8B2121] shadow-lg w-full sm:w-auto">
-                <span>Explore the tournament</span>
-                <div className="bg-white text-black p-2.5 rounded-full flex items-center justify-center">
-                  <ArrowRight size={18} strokeWidth={1} className="-rotate-45 duration-300 group-hover:rotate-0" />
-                </div>
-              </button>
+              <ActionButton variant="secondary">
+                Explore the tournament
+              </ActionButton>
             </div>
           </div>
         </div>
