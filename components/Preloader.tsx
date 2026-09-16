@@ -33,7 +33,7 @@ export function Preloader() {
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white overflow-hidden"
+          className="fixed inset-0 z-60 flex items-center justify-center bg-white overflow-hidden"
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
