@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <nav className="w-full flex items-center justify-between px-12 py-5 text-white absolute top-0 left-0 z-50">
       <div className="flex items-center gap-2 font-sans text-[20px] select-none">
-        <Image src="/images/logo.svg" width={100} height={100} alt="Logo" />
+        <Image src="/images/logo.svg" width={100} height={35} alt="Logo" />
       </div>
 
       <div className='flex items-center lg:gap-14'>

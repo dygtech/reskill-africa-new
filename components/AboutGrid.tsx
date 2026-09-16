@@ -78,7 +78,8 @@ export function AboutGrid() {
                 src="/images/about-section-1.webp"
                 alt="Placeholder"
                 fill
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
             </div>
@@ -87,7 +88,8 @@ export function AboutGrid() {
                 src="/images/about-section-4.webp"
                 alt="Placeholder"
                 fill
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute top-5 left-5 flex items-center gap-2 text-white font-sans font-medium text-[15px] drop-shadow-md">
@@ -104,7 +106,8 @@ export function AboutGrid() {
                 src="/images/about-section-2.webp"
                 alt="Placeholder"
                 fill
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute bottom-5 left-5 flex items-center gap-2 text-white font-sans font-medium text-[15px] drop-shadow-md">
@@ -121,7 +124,8 @@ export function AboutGrid() {
                 src="/images/about-section-3.webp"
                 alt="Placeholder"
                 fill
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute bottom-5 left-5 flex items-center gap-2 text-white font-sans font-medium text-[15px] drop-shadow-md">
@@ -134,7 +138,8 @@ export function AboutGrid() {
                 src="/images/about-section-5.webp"
                 alt="Placeholder"
                 fill
-                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 33vw"
+className="object-cover object-top"
               />
               <div className="absolute inset-0 bg-black/30" />
             </div>
