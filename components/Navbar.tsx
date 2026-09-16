@@ -10,7 +10,7 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   // Add any other routes that have a white background here
-  const lightModeRoutes = ['/about'];
+  const lightModeRoutes = ['/about', '/skildustry'];
   const isLightMode = lightModeRoutes.includes(pathname);
 
   const navTextColor = isLightMode ? 'text-black' : 'text-white';
@@ -34,7 +34,22 @@ export const Navbar = () => {
         <div className="hidden lg:flex items-center gap-10 text-[14px] leading-4.5 tracking-[-0.04em] font-normal">
           <Link href="/about" className={getLinkStyle('/about')}>About</Link>
           <Link href="#" className={getLinkStyle('#')}>The Vision</Link>
-          <Link href="#" className={getLinkStyle('#')}>Skill Passport</Link>
+          
+          {/* Skildustry Dropdown Menu */}
+          <div className="relative group py-2">
+            <Link href="/skildustry" className={`flex items-center gap-1.5 ${navHoverColor} transition-colors ${pathname.startsWith('/skildustry') ? activeColor : ''}`}>
+              Skildustry <ChevronDown size={14} className="mt-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200" />
+            </Link>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col py-2 mt-1">
+              <Link href="/skildustry" className="px-4 py-2.5 text-text-dark hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center">
+                Overview
+              </Link>
+              <Link href="#" className="px-4 py-2.5 text-text-dark hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50">
+                Skill Passport
+              </Link>
+            </div>
+          </div>
+
           <Link href="#" className={getLinkStyle('#')}>Training Tracks</Link>
           <Link href="#" className={getLinkStyle('#')}>Our Partners</Link>
           <button className={`flex items-center gap-1.5 ${navHoverColor} transition-colors`}>
