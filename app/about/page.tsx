@@ -10,12 +10,12 @@ export default function AboutPage() {
       <section className="w-full pt-32 pb-16 px-4 md:px-12 flex flex-col items-center">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
           {/* Top Tag */}
-          <div className="inline-flex items-center gap-2 border border-[#9c2525] text-[#9c2525] rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 border border-primary text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
             <Target size={16} />
             About Re-Skill Africa
           </div>
 
-          <h1 className="text-[40px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-tight text-[#111111] mb-6">
+          <h1 className="text-[40px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-tight text-text-dark mb-6">
             A continental institution for <br />
             human productivity.
           </h1>
@@ -74,11 +74,11 @@ export default function AboutPage() {
       {/* Methodology Section */}
       <section className="w-full bg-white pt-24 pb-150 px-4 md:px-12 flex flex-col items-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 border border-[#9c2525] text-[#9c2525] rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 border border-primary text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
             <Users2 size={16} />
             The Methodology
           </div>
-          <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-[#111111] mb-6">
+          <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-text-dark mb-6">
             Skildustry is Re-Skill Africa’s proprietary doctrine.
           </h2>
           <p className="text-gray-600 text-[16px] md:text-[18px] font-sans font-normal leading-relaxed">
@@ -90,7 +90,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
 
           {/* Card 1 */}
-          <div className="bg-[#9c2525] rounded-4xl p-8 md:p-10 flex flex-col relative overflow-hidden group h-full">
+          <div className="bg-primary rounded-4xl p-8 md:p-10 flex flex-col relative overflow-hidden group h-full">
             {/* Subtle zig-zag pattern overlay could go here, simulating it with gradient/opacity */}
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white to-transparent"></div>
 
@@ -102,7 +102,7 @@ export default function AboutPage() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#9c2525] rounded-4xl p-8 md:p-10 flex flex-col relative overflow-hidden group h-full">
+          <div className="bg-primary rounded-4xl p-8 md:p-10 flex flex-col relative overflow-hidden group h-full">
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white to-transparent"></div>
 
             <Globe2 className="text-white/80 w-10 h-10 mb-8 relative z-10" />
@@ -115,7 +115,7 @@ export default function AboutPage() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#9c2525] rounded-4xl p-8 md:p-10 flex flex-col relative overflow-hidden group h-full">
+          <div className="bg-primary rounded-4xl p-8 md:p-10 flex flex-col relative overflow-hidden group h-full">
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white to-transparent"></div>
 
             <MapPin className="text-white/80 w-10 h-10 mb-8 relative z-10" />

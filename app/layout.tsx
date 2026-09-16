@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className="h-full antialiased scroll-smooth"
     >
-      <body className="min-h-full flex flex-col bg-[#0f4b66] text-white">
+      <body className="min-h-full flex flex-col bg-layout-bg text-white">
         <Preloader />
         <Navbar />
         {children}

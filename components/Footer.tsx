@@ -7,10 +7,10 @@ import { ActionButton } from "./ActionButton";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#8b2323] text-white pt-32 pb-12 w-full font-sans">
+    <footer className="relative bg-primary-dark text-white pt-32 pb-12 w-full font-sans">
 
       {/* Overlapping CTA Card */}
-      <div className="absolute flex items-end left-1/2 -translate-x-1/2 -top-110 w-[90%] max-w-250 h-full max-h-131.75 bg-[#9c2525] rounded-3xl p-10 md:p-14 shadow-2xl overflow-hidden border-8 border-white">
+      <div className="absolute flex items-end left-1/2 -translate-x-1/2 -top-110 w-[90%] max-w-250 h-full max-h-131.75 bg-primary rounded-3xl p-10 md:p-14 shadow-2xl overflow-hidden border-8 border-white">
         {/* Pattern overlay (simulated) */}
         <div className="absolute inset-0  bg-[url(/images/footer_card_vector.png)]"></div>
 

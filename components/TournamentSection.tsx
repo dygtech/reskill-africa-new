@@ -36,7 +36,7 @@ export function TournamentSection() {
 
         {/* Top Tag */}
         <div className="flex items-center gap-2 border border-black/15 rounded-full px-5 py-2 mb-10 bg-white shadow-sm">
-          <Image src={"/images/brain-icon.svg"} alt="brain" width={18} height={18} className="text-[#9c2525]" />
+          <Image src={"/images/brain-icon.svg"} alt="brain" width={18} height={18} className="text-primary" />
           <span className="text-[14px] font-medium text-black/80 tracking-tight">Discovering Talent & Driving Industry</span>
         </div>
 
@@ -45,7 +45,7 @@ export function TournamentSection() {
           <h2 className={`text-[42px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-black ${slideUpClass("delay-100ms")}`}>
             The Africa Innovation
           </h2>
-          <h2 className={`text-[42px] md:text-[48px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-[#adadad] ${slideUpClass("delay-300")}`}>
+          <h2 className={`text-[42px] md:text-[48px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-text-light ${slideUpClass("delay-300")}`}>
             Tournament
           </h2>
         </div>

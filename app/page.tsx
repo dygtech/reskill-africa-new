@@ -22,7 +22,7 @@ export default function Home() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#072433]/50 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-layout-overlay/50 mix-blend-multiply" />
         <div className="absolute inset-0 bg-black/10" />
 
         {/* Main Content Container */}

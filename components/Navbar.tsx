@@ -14,8 +14,12 @@ export const Navbar = () => {
   const isLightMode = lightModeRoutes.includes(pathname);
 
   const navTextColor = isLightMode ? 'text-black' : 'text-white';
-  const navHoverColor = isLightMode ? 'hover:text-[#9c2525]' : 'hover:text-white/80';
+  const navHoverColor = isLightMode ? 'hover:text-primary' : 'hover:text-white/80';
   const logoSrc = isLightMode ? '/images/logo_alt.svg' : '/images/logo.svg';
+
+  const activeColor = isLightMode ? 'text-primary font-semibold' : 'text-white font-semibold';
+  const getLinkStyle = (path: string) => 
+    `${navHoverColor} transition-colors ${pathname === path ? activeColor : ''}`;
 
   return (
     <nav className={`w-full flex items-center justify-between px-12 py-5 absolute top-0 left-0 z-50 ${navTextColor}`}>
@@ -28,11 +32,11 @@ export const Navbar = () => {
       <div className='flex items-center lg:gap-14'>
 
         <div className="hidden lg:flex items-center gap-10 text-[14px] leading-4.5 tracking-[-0.04em] font-normal">
-          <Link href="/about" className={`${navHoverColor} transition-colors`}>About</Link>
-          <Link href="#" className={`${navHoverColor} transition-colors`}>The Vision</Link>
-          <Link href="#" className={`${navHoverColor} transition-colors`}>Skill Passport</Link>
-          <Link href="#" className={`${navHoverColor} transition-colors`}>Training Tracks</Link>
-          <Link href="#" className={`${navHoverColor} transition-colors`}>Our Partners</Link>
+          <Link href="/about" className={getLinkStyle('/about')}>About</Link>
+          <Link href="#" className={getLinkStyle('#')}>The Vision</Link>
+          <Link href="#" className={getLinkStyle('#')}>Skill Passport</Link>
+          <Link href="#" className={getLinkStyle('#')}>Training Tracks</Link>
+          <Link href="#" className={getLinkStyle('#')}>Our Partners</Link>
           <button className={`flex items-center gap-1.5 ${navHoverColor} transition-colors`}>
             Tournament <ChevronDown size={14} className="mt-0.5 opacity-80" />
           </button>

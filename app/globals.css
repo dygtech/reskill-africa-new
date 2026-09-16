@@ -8,6 +8,22 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* Brand Colors */
+  --color-primary: #9c2525;
+  --color-primary-hover: #a62b2b;
+  --color-primary-dark: #8B2121;
+  
+  /* Layout Colors */
+  --color-layout-bg: #0f4b66;
+  --color-layout-overlay: #072433;
+  
+  /* Text & Border Colors */
+  --color-text-dark: #111111;
+  --color-text-gray: #666666;
+  --color-text-light: #adadad;
+  --color-border-light: #dbdbdb;
+
   --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif;
 }
 

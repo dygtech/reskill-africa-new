@@ -55,7 +55,7 @@ export function AboutGrid() {
                 <span
                   key={index}
                   className={`transition-colors duration-500 ${
-                    index === activeWordIndex ? "text-[#9c2525]" : "text-inherit"
+                    index === activeWordIndex ? "text-primary" : "text-inherit"
                   }`}
                 >
                   {word}{" "}

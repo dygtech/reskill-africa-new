@@ -12,14 +12,14 @@ export function ActionButton({ variant = 'primary', children, className = '', ..
   return (
     <button
       className={`group flex items-center justify-between gap-6 px-1.5 py-1.5 pl-6 rounded-full hover:gap-12 font-sans text-[15px] font-medium transition-all duration-300 shadow-lg w-full sm:w-auto ${
-        isPrimary ? 'bg-white text-black' : 'bg-[#9c2525] text-white hover:bg-[#8B2121]'
+        isPrimary ? 'bg-white text-black' : 'bg-primary text-white hover:bg-primary-dark'
       } ${className}`}
       {...props}
     >
       <span>{children}</span>
       <div
         className={`p-2.5 rounded-full flex items-center justify-center ${
-          isPrimary ? 'bg-[#9c2525] text-white' : 'bg-white text-black'
+          isPrimary ? 'bg-primary text-white' : 'bg-white text-black'
         }`}
       >
         <ArrowRight
