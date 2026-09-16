@@ -3,6 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ActionButton } from "./ActionButton";
 
 export function Footer() {
   return (
@@ -13,33 +14,24 @@ export function Footer() {
         {/* Pattern overlay (simulated) */}
         <div className="absolute inset-0  bg-[url(/images/footer_card_vector.png)]"></div>
 
-        <div className="relative z-10 max-w-2xl">
+        <div className="relative z-10 max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight tracking-tight">
             Join Us in Building <br /> Africa's Future
           </h2>
-          <p className="text-white/90 text-sm md:text-base font-light mb-8 max-w-lg leading-relaxed">
+          <p className="text-white/90 text-sm md:text-base font-light mb-8 max-w-xl leading-relaxed">
             Re-Skill Africa is open to individuals ready to demonstrate capability, organisations seeking talent and solutions, and partners committed to strengthening Africa's economic future.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-white text-black px-5 py-2.5 rounded-full text-sm font-medium flex items-center gap-3 hover:bg-gray-100 transition-colors">
+            <ActionButton variant="primary">
               Get involved
-              <div className="bg-[#8b2323] rounded-full p-1 text-white">
-                <ArrowUpRight size={14} />
-              </div>
-            </button>
-            <button className="bg-white text-black px-5 py-2.5 rounded-full text-sm font-medium flex items-center gap-3 hover:bg-gray-100 transition-colors">
+            </ActionButton>
+            <ActionButton variant="primary">
               Apply to innovation tournament
-              <div className="bg-[#8b2323] rounded-full p-1 text-white">
-                <ArrowUpRight size={14} />
-              </div>
-            </button>
-            <button className="bg-white text-black px-5 py-2.5 rounded-full text-sm font-medium flex items-center gap-3 hover:bg-gray-100 transition-colors">
+            </ActionButton>
+            <ActionButton variant="primary">
               Partner with us
-              <div className="bg-[#8b2323] rounded-full p-1 text-white">
-                <ArrowUpRight size={14} />
-              </div>
-            </button>
+            </ActionButton>
           </div>
         </div>
       </div>
