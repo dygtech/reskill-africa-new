@@ -3,7 +3,7 @@ import "@fontsource/mona-sans";
 import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
-
+import { Preloader } from "@/components/Preloader";
 export const metadata: Metadata = {
   title: "Re-Skill Africa",
   description: "Re-Skill Africa Platform",
@@ -16,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className="h-full antialiased scroll-smooth"
     >
       <body className="min-h-full flex flex-col bg-[#0f4b66] text-white">
+        <Preloader />
         <Navbar />
         {children}
       </body>

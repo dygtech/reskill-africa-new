@@ -50,7 +50,7 @@ export function OurImpact() {
   }, []);
 
   return (
-    <section className="bg-white py-24 md:pt-32 md:pb-200 w-full">
+    <section className="bg-white pt-24 md:pt-32 pb:700 md:pb-200 w-full">
       <div
         ref={containerRef}
         className="max-w-300 mx-auto px-8 md:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24"
