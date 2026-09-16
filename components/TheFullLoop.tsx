@@ -42,7 +42,7 @@ export const TheFullLoop = () => {
                 animate={{ y: 0, opacity: 1, rotateX: 0 }}
                 exit={{ y: -50, opacity: 0, rotateX: 60 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="text-[42px] md:text-[54px] font-bold text-primary leading-[1.1] tracking-[-0.03em] absolute w-full"
+                className="hidden md:block text-[42px] md:text-[54px] font-bold text-primary leading-[1.1] tracking-[-0.03em] absolute w-full"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 {pillars[activeIndex].title}
