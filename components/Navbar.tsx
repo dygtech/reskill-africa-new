@@ -17,7 +17,7 @@ export const Navbar = () => {
   const navHoverColor = isLightMode ? 'hover:text-primary' : 'hover:text-white/80';
   const logoSrc = isLightMode ? '/images/logo_alt.svg' : '/images/logo.svg';
 
-  const activeColor = isLightMode ? 'text-primary font-semibold' : 'text-white font-semibold';
+  const activeColor = 'text-primary font-semibold';
   const getLinkStyle = (path: string) =>
     `${navHoverColor} transition-colors ${pathname === path ? activeColor : ''}`;
 
@@ -34,6 +34,8 @@ export const Navbar = () => {
         <div className="hidden lg:flex items-center gap-10 text-[14px] leading-4.5 tracking-[-0.04em] font-normal">
           <Link href="/about" className={getLinkStyle('/about')}>About</Link>
           <Link href="#" className={getLinkStyle('#')}>The Vision</Link>
+
+          <Link href="/sectors" className={getLinkStyle('/sectors')}>Sectors</Link>
 
           {/* Skildustry Dropdown Menu */}
           <div className="relative group py-2">
