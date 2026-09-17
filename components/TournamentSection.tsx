@@ -45,7 +45,7 @@ export function TournamentSection() {
           <h2 className={`text-[42px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-black ${slideUpClass("delay-100ms")}`}>
             The Africa Innovation
           </h2>
-          <h2 className={`text-[42px] md:text-[48px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-text-light ${slideUpClass("delay-300")}`}>
+          <h2 className={`text-[42px] md:text-[48px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-brand-light ${slideUpClass("delay-300")}`}>
             Tournament
           </h2>
         </div>

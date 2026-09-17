@@ -57,12 +57,12 @@ export function OurImpact() {
       >
         {/* Left Content */}
         <div className="flex-1 flex flex-col">
-          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border-light mb-8 w-fit transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-light-2 mb-8 w-fit transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             <TrendingUp size={16} className="text-primary" />
-            <span className="text-[13px] font-medium text-text-dark">Our Impact</span>
+            <span className="text-[13px] font-medium text-brand-dark">Our Impact</span>
           </div>
 
-          <h2 className={`text-[36px] md:text-[48px] font-bold text-text-dark leading-[1.1] tracking-[-0.03em] mb-16 transition-all duration-700 delay-100 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <h2 className={`text-[36px] md:text-[48px] font-bold text-brand-dark leading-[1.1] tracking-[-0.03em] mb-16 transition-all duration-700 delay-100 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             By 2030, Re-Skill Africa <br /> aims to deliver these transformative outcomes across the continent
           </h2>
 
@@ -77,10 +77,10 @@ export function OurImpact() {
                   <item.icon size={20} strokeWidth={1.5} />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <h3 className="text-[32px] md:text-[38px] font-bold text-text-dark leading-none tracking-tight">
+                  <h3 className="text-[32px] md:text-[38px] font-bold text-brand-dark leading-none tracking-tight">
                     {item.value}
                   </h3>
-                  <p className="text-text-gray text-[15px] font-light mt-1">
+                  <p className="text-brand-gray text-[15px] font-light mt-1">
                     {item.label}
                   </p>
                 </div>

@@ -8,21 +8,21 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   /* Brand Colors */
   --color-primary: #9c2525;
   --color-primary-hover: #a62b2b;
   --color-primary-dark: #8B2121;
-  
+
   /* Layout Colors */
   --color-layout-bg: #0f4b66;
   --color-layout-overlay: #072433;
-  
+
   /* Text & Border Colors */
-  --color-text-dark: #111111;
-  --color-text-gray: #666666;
-  --color-text-light: #adadad;
-  --color-border-light: #dbdbdb;
+  --color-brand-dark: #111111;
+  --color-brand-gray: #666666;
+  --color-brand-light: #adadad;
+  --color-brand-light-2: #dbdbdb;
 
   --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif;
 }
@@ -45,6 +45,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);

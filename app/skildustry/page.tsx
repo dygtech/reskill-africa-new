@@ -15,7 +15,7 @@ export default function SkildustryPage() {
             Skildustry
           </div>
 
-          <h1 className="text-[40px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-tight text-text-dark mb-4">
+          <h1 className="text-[40px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-tight text-brand-dark mb-4">
             Where skills meet industry.
           </h1>
 
@@ -23,7 +23,7 @@ export default function SkildustryPage() {
             Industry becomes the classroom. Production becomes the curriculum. Economic productivity becomes the proof of learning.
           </h2>
 
-          <p className="text-gray-600 text-[16px] md:text-[18px] font-sans font-normal mb-10 max-w-3xl leading-relaxed">
+          <p className="text-brand-gray text-[16px] md:text-[18px] font-sans font-normal mb-10 max-w-3xl leading-relaxed">
             Skildustry is a doctrine - the operating logic by which Re-Skill Africa converts skill into productivity, and productivity into industrial output. The anchor holds: <strong>demand before training, always.</strong> And the doctrine goes further. Where possible, enterprise itself comes before training - because real production is the only environment in which economic-grade competence forms at market standard.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function SkildustryPage() {
             <Scale size={16} />
             Re-Skill Africa's Operating Laws
           </div>
-          <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-text-dark mb-6">
+          <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-brand-dark mb-6">
             Three laws hold our system together.
           </h2>
         </div>
@@ -158,12 +158,12 @@ export default function SkildustryPage() {
       {/* Final Note */}
       <section className="w-full bg-white pt-24 pb-150 px-4 md:px-12 flex flex-col items-center text-center  relative">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-sans font-bold leading-[1.2] tracking-tight text-text-dark mb-8">
+          <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-sans font-bold leading-[1.2] tracking-tight text-brand-dark mb-8">
             Africa's productive future does not come from more training. <span className="text-primary">It comes from more production.</span>
           </h2>
-          <p className="text-gray-600 text-[16px] md:text-[18px] font-sans font-normal leading-relaxed max-w-3xl mx-auto">
+          <p className="text-brand-gray text-[16px] md:text-[18px] font-sans font-normal leading-relaxed max-w-3xl mx-auto">
             Skildustry designs the enterprise, the production system, the learning architecture, the competence framework, and the economic outcomes as one integrated whole. <br className="hidden md:block mt-4" />
-            <strong className="font-semibold text-text-dark mt-4 block">Industry becomes the classroom. Production becomes the curriculum. Economic productivity becomes the proof of learning.</strong>
+            <strong className="font-semibold text-brand-dark mt-4 block">Industry becomes the classroom. Production becomes the curriculum. Economic productivity becomes the proof of learning.</strong>
           </p>
         </div>
       </section>

@@ -41,14 +41,14 @@ export const StrategicPillars = () => {
 
         {/* Left Side Sticky */}
         <div className="w-full lg:w-[45%] lg:sticky top-32 h-fit">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border-light mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-light-2 mb-8">
             <GitFork size={16} className="text-primary transform rotate-180" />
-            <span className="text-[13px] font-medium text-text-dark">Core Foundations</span>
+            <span className="text-[13px] font-medium text-brand-dark">Core Foundations</span>
           </div>
-          <h2 className="text-[42px] md:text-[54px] font-bold text-text-dark mb-6 leading-[1.1] tracking-[-0.03em]">
+          <h2 className="text-[42px] md:text-[54px] font-bold text-brand-dark mb-6 leading-[1.1] tracking-[-0.03em]">
             Strategic Pillars
           </h2>
-          <p className="text-text-gray text-[17px] leading-[1.6] max-w-100 font-light">
+          <p className="text-brand-gray text-[17px] leading-[1.6] max-w-100 font-light">
             Re-Skill Africa is built on a set of core pillars that guide how talent is identified, evaluated, and integrated into economic activity.
           </p>
         </div>
@@ -66,11 +66,11 @@ export const StrategicPillars = () => {
                 />
               </div>
               <div className="px-2">
-                <h3 className="text-[20px] text-text-dark mb-4 flex items-center gap-3">
+                <h3 className="text-[20px] text-brand-dark mb-4 flex items-center gap-3">
                   <span className="font-bold">{pillar.num}</span>
                   <span className="font-medium tracking-tight">{pillar.title}</span>
                 </h3>
-                <p className="text-text-gray text-[15px] leading-[1.7] font-light">
+                <p className="text-brand-gray text-[15px] leading-[1.7] font-light">
                   {pillar.desc}
                 </p>
               </div>

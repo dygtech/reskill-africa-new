@@ -15,16 +15,16 @@ export default function AboutPage() {
             About Re-Skill Africa
           </div>
 
-          <h1 className="text-[40px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-tight text-text-dark mb-6">
+          <h1 className="text-[40px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-tight text-brand-dark mb-6">
             A continental institution for <br />
             human productivity.
           </h1>
 
-          <p className="text-gray-600 text-[16px] md:text-[18px] font-sans font-normal mb-8 max-w-3xl leading-relaxed">
+          <p className="text-brand-gray text-[16px] md:text-[18px] font-sans font-normal mb-8 max-w-3xl leading-relaxed">
             Re-Skill Africa is a continental human productivity and industrialisation institution - the operating arm of Del-York Group’s Skildustry doctrine. It exists to close the gap between Africa’s talent and its productive demand, and to build the productive demand itself.
           </p>
 
-          <p className="text-gray-600 text-[16px] md:text-[18px] font-sans font-normal mb-10 max-w-3xl leading-relaxed">
+          <p className="text-brand-gray text-[16px] md:text-[18px] font-sans font-normal mb-10 max-w-3xl leading-relaxed">
             The institution operates across multiple sectors - creative and technical production, construction, and agriculture and food processing. Its mechanisms apply the same doctrine at every scale: <strong>demand before training, always.</strong>
           </p>
         </div>
@@ -78,10 +78,10 @@ export default function AboutPage() {
             <Users2 size={16} />
             The Methodology
           </div>
-          <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-text-dark mb-6">
+          <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-brand-dark mb-6">
             Skildustry is Re-Skill Africa’s proprietary doctrine.
           </h2>
-          <p className="text-gray-600 text-[16px] md:text-[18px] font-sans font-normal leading-relaxed">
+          <p className="text-brand-gray text-[16px] md:text-[18px] font-sans font-normal leading-relaxed">
             The operating logic that runs beneath every Re-Skill Africa’s mechanism. Its ambition is African-originated: an operating model for converting human potential into productive economic capacity, at continental scale and eventually beyond.
           </p>
         </div>
