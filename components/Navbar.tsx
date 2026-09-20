@@ -10,7 +10,7 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   // Add any other routes that have a white background here
-  const lightModeRoutes = ['/about', '/skildustry'];
+  const lightModeRoutes = ['/about', '/skildustry', '/projects'];
   const isLightMode = lightModeRoutes.includes(pathname);
 
   const navTextColor = isLightMode ? 'text-black' : 'text-white';
@@ -39,24 +39,25 @@ export const Navbar = () => {
 
           {/* Skildustry Dropdown Menu */}
           <div className="relative group py-2">
-            <Link href="/skildustry" className={`flex items-center gap-1.5 ${navHoverColor} transition-colors ${pathname.startsWith('/skildustry') ? activeColor : ''}`}>
+            <Link href="/skildustry" className={`flex items-center gap-1.5 ${navHoverColor} transition-colors ${pathname.startsWith('/skildustry') || pathname === '/skill-passport' ? activeColor : ''}`}>
               Skildustry <ChevronDown size={14} className="mt-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200" />
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col py-2 mt-1">
-              <Link href="/skildustry" className="px-4 py-2.5 text-brand-dark hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center">
+              <Link href="/skildustry" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center ${pathname === '/skildustry' ? 'text-primary bg-gray-50' : 'text-brand-dark'}`}>
                 Overview
               </Link>
-              <Link href="#" className="px-4 py-2.5 text-brand-dark hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50">
+              <Link href="/skill-passport" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50 ${pathname === '/skill-passport' ? 'text-primary bg-gray-50' : 'text-brand-dark'}`}>
                 Skill Passport
               </Link>
             </div>
           </div>
 
           <Link href="#" className={getLinkStyle('#')}>Training Tracks</Link>
+          <Link href="/projects" className={getLinkStyle('/projects')}>Projects</Link>
           <Link href="#" className={getLinkStyle('#')}>Our Partners</Link>
-          <button className={`flex items-center gap-1.5 ${navHoverColor} transition-colors`}>
-            Tournament <ChevronDown size={14} className="mt-0.5 opacity-80" />
-          </button>
+          <Link href='/tournament' className={`${getLinkStyle('/tournament')}`}>
+            Tournament
+          </Link>
         </div>
 
         <div className="flex items-center gap-8">

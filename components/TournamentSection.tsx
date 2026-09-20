@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ActionButton } from "@/components/ActionButton";
+import { motion } from "framer-motion";
 
 export function TournamentSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -42,9 +43,17 @@ export function TournamentSection() {
 
         {/* Headings */}
         <div className="text-center mb-16 flex flex-col gap-1">
-          <h2 className={`text-[42px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-black ${slideUpClass("delay-100ms")}`}>
-            The Africa Innovation
-          </h2>
+          {/* "The Africa Innovation" — reveal wipe */}
+          <div className="overflow-hidden">
+            <motion.h2
+              className="text-[42px] md:text-[56px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-black"
+              initial={{ y: "100%" }}
+              animate={isVisible ? { y: "0%" } : {}}
+              transition={{ duration: 0.75, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              The Africa Innovation
+            </motion.h2>
+          </div>
           <h2 className={`text-[42px] md:text-[48px] lg:text-[64px] font-sans font-bold leading-[1.05] tracking-[-8%] text-brand-light ${slideUpClass("delay-300")}`}>
             Tournament
           </h2>
