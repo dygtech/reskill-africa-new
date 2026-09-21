@@ -69,8 +69,8 @@ export function Footer({
             <Link href="#" className="text-white/80 hover:text-white text-sm font-light">The Vision</Link>
             <Link href="#" className="text-white/80 hover:text-white text-sm font-light">The Model (Skilldustry)</Link>
             <Link href="/skill-passport" className="text-white/80 hover:text-white text-sm font-light">The Skill Passport</Link>
-            <Link href="#" className="text-white/80 hover:text-white text-sm font-light">Training tracks</Link>
-            <Link href="#" className="text-white/80 hover:text-white text-sm font-light">Our Partners</Link>
+            <Link href="/training-tracks" className="text-white/80 hover:text-white text-sm font-light">Training tracks</Link>
+            <Link href="/partner-with-us" className="text-white/80 hover:text-white text-sm font-light">Our Partners</Link>
           </div>
 
           {/* Resources */}

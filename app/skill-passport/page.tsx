@@ -447,7 +447,7 @@ export default function SkillPassportPage() {
       <HowItWorksSection />
 
       {/* ── FINAL CTA ─────────────────────────── */}
-      <section className="w-full bg-white pt-4 pb-150 px-4 md:px-12 flex flex-col items-center text-center">
+      <section className="w-full bg-white pt-4 pb-70  px-4 md:px-12 flex flex-col items-center text-center">
         <div className="max-w-3xl mx-auto">
           <RevealText
             className="text-[28px] md:text-[40px] lg:text-[48px] font-bold leading-[1.15] tracking-tight text-brand-dark mb-8"

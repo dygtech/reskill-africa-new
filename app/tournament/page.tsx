@@ -94,7 +94,7 @@ export default function TournamentPage() {
       </section>
 
       {/* ─── CLOSING CTA ──────────────────────────────────────────────── */}
-      <section className="w-full bg-white pt-24 pb-150 px-4 md:px-12 flex flex-col items-center text-center">
+      <section className="w-full bg-white pt-24 pb-70 px-4 md:px-12 flex flex-col items-center text-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center">
           <div className="inline-flex items-center gap-2 border border-primary text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
             <ExternalLink size={15} />

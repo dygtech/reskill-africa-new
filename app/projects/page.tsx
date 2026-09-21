@@ -140,7 +140,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Closing CTA */}
-      <section className="w-full py-32 px-4 md:px-12 flex flex-col items-center">
+      <section className="w-full pt-32 pb-70 px-4 md:px-12 flex flex-col items-center">
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
           <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-brand-dark mb-8">
             Ready to partner with us?

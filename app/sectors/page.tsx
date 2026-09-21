@@ -116,7 +116,7 @@ export default function SectorsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full bg-primary pt-24 pb-150 px-4 md:px-12 flex flex-col items-center text-center relative overflow-hidden">
+      <section className="w-full bg-primary pt-24 pb-70 px-4 md:px-12 flex flex-col items-center text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white to-transparent"></div>
         <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
           <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-white mb-10 max-w-3xl">
