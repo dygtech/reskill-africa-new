@@ -34,12 +34,15 @@ export const Navbar = () => {
         <div className="hidden lg:flex items-center gap-10 text-[14px] leading-4.5 tracking-[-0.04em] font-normal">
           {/* About Dropdown Menu */}
           <div className="relative group py-2">
-            <Link href="/about" className={`flex items-center gap-1.5 ${navHoverColor} transition-colors ${['/about', '/partner-with-us'].includes(pathname) ? activeColor : ''}`}>
+            <Link href="/about" className={`flex items-center gap-1.5 ${navHoverColor} transition-colors ${['/about', '/partner-with-us', '/leadership'].includes(pathname) ? activeColor : ''}`}>
               About <ChevronDown size={14} className="mt-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200" />
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col py-2 mt-1">
               <Link href="/about" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center ${pathname === '/about' ? 'text-primary bg-gray-50' : 'text-brand-dark'}`}>
                 Overview
+              </Link>
+              <Link href="/leadership" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50 ${pathname === '/leadership' ? 'text-primary bg-gray-50' : 'text-brand-dark'}`}>
+                Leadership
               </Link>
               <Link href="#" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50 text-brand-dark`}>
                 The Vision
