@@ -58,7 +58,7 @@ export function SkillPassportCard() {
               key={skill}
               className="flex items-center gap-1 bg-white text-black rounded-2xl w-fit h-fit px-3 py-1 text-[11px] font-medium"
             >
-              <CheckCircle size={10} className="text-primary shrink-0" />
+              <CheckCircle size={10} className="text-black shrink-0" />
               {skill}
             </span>
           ))}

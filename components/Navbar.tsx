@@ -52,7 +52,7 @@ export const Navbar = () => {
             </div>
           </div>
 
-          <Link href="#" className={getLinkStyle('#')}>Training Tracks</Link>
+          <Link href="/training-tracks" className={getLinkStyle('/training-tracks')}>Training Tracks</Link>
           <Link href="/projects" className={getLinkStyle('/projects')}>Projects</Link>
           <Link href="#" className={getLinkStyle('#')}>Our Partners</Link>
           <Link href='/tournament' className={`${getLinkStyle('/tournament')}`}>
