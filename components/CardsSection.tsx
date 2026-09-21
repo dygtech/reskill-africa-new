@@ -91,7 +91,7 @@ export function CardsSection() {
             <div className="w-full rounded-3xl bg-white/15 backdrop-blur-md border border-white/30 p-3 shadow-xl flex flex-row gap-3 mt-auto mb-2 items-center">
               <div className="relative w-22.5 h-32.5 rounded-[14px] overflow-hidden shrink-0">
                 <Image
-                  src="/images/about-section-5.webp"
+                  src="/images/card-4.png"
                   alt="Osinachi Chidoka"
                   fill
                   sizes="120px"
