@@ -82,51 +82,31 @@ export default function TrainingTracksPage() {
         </section>
 
         {/* ── CTA SECTION ────────────────────────── */}
-        <section className="w-full pb-10 px-4 md:px-12 flex flex-col items-center">
-          <div className="max-w-5xl mx-auto w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="w-full bg-[#992828] rounded-[32px] md:rounded-[48px] p-10 md:p-16 relative overflow-hidden flex flex-col items-start shadow-xl border-4 border-white translate-y-20 z-10"
-            >
-              {/* Pattern overlay */}
-              <div className="absolute inset-0 bg-[url(/images/footer_card_vector.png)] opacity-15 pointer-events-none bg-cover bg-center" />
-
-              <div className="relative z-10 max-w-2xl">
-                <h2 className="text-white text-[36px] md:text-[52px] font-bold leading-[1.05] tracking-tight mb-6">
-                  Ready to Build Africa's Future?
-                </h2>
-                <p className="text-white/90 text-[15px] md:text-[17px] leading-relaxed mb-10 max-w-[90%]">
-                  Join thousands of learners who are already part of Africa's industrial transformation through our Skildustry training tracks.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-center gap-4">
-                  <Link href="/skildustry" className="w-full sm:w-auto">
-                    <button className="w-full bg-white text-[#992828] px-6 py-3.5 rounded-full font-medium text-[14px] flex items-center justify-center gap-3 hover:scale-105 transition-transform duration-300 shadow-md">
-                      Apply Now
-                      <div className="w-5 h-5 rounded-full bg-[#992828] text-white flex items-center justify-center shrink-0">
-                        <ArrowRight size={12} strokeWidth={3} />
-                      </div>
-                    </button>
-                  </Link>
-
-                  <Link href="/skill-passport" className="w-full sm:w-auto">
-                    <button className="w-full bg-white text-[#992828] px-6 py-3.5 rounded-full font-medium text-[14px] flex items-center justify-center gap-3 hover:scale-105 transition-transform duration-300 shadow-md">
-                      Learn About Skill Passport
-                      <div className="w-5 h-5 rounded-full bg-[#992828] text-white flex items-center justify-center shrink-0">
-                        <ArrowRight size={12} strokeWidth={3} />
-                      </div>
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <Footer />
+        <Footer 
+          ctaTitle="Ready to Build Africa's Future?"
+          ctaDescription="Join thousands of learners who are already part of Africa's industrial transformation through our Skildustry training tracks."
+          ctaButtons={
+            <>
+              <Link href="/skildustry" className="w-full sm:w-auto">
+                <button className="w-full bg-white text-[#992828] px-6 py-3.5 rounded-full font-medium text-[14px] flex items-center justify-center gap-3 hover:scale-105 transition-transform duration-300 shadow-md">
+                  Apply Now
+                  <div className="w-5 h-5 rounded-full bg-[#992828] text-white flex items-center justify-center shrink-0">
+                    <ArrowRight size={12} strokeWidth={3} />
+                  </div>
+                </button>
+              </Link>
+              
+              <Link href="/skill-passport" className="w-full sm:w-auto">
+                <button className="w-full bg-white text-[#992828] px-6 py-3.5 rounded-full font-medium text-[14px] flex items-center justify-center gap-3 hover:scale-105 transition-transform duration-300 shadow-md">
+                  Learn About Skill Passport
+                  <div className="w-5 h-5 rounded-full bg-[#992828] text-white flex items-center justify-center shrink-0">
+                    <ArrowRight size={12} strokeWidth={3} />
+                  </div>
+                </button>
+              </Link>
+            </>
+          }
+        />
       </div>
     </div>
   );

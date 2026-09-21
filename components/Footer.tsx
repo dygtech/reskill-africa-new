@@ -4,37 +4,53 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ActionButton } from "./ActionButton";
+import { ReactNode } from "react";
 
-export function Footer() {
+interface FooterProps {
+  showCta?: boolean;
+  ctaTitle?: ReactNode;
+  ctaDescription?: ReactNode;
+  ctaButtons?: ReactNode;
+}
+
+export function Footer({
+  showCta = true,
+  ctaTitle = (
+    <>
+      Join Us in Building <br /> Africa's Future
+    </>
+  ),
+  ctaDescription = "Re-Skill Africa is open to individuals ready to demonstrate capability, organisations seeking talent and solutions, and partners committed to strengthening Africa's economic future.",
+  ctaButtons = (
+    <>
+      <ActionButton variant="primary">Get involved</ActionButton>
+      <ActionButton variant="primary">Apply to innovation tournament</ActionButton>
+      <ActionButton variant="primary">Partner with us</ActionButton>
+    </>
+  ),
+}: FooterProps) {
   return (
-    <footer className="relative bg-primary-dark text-white pt-32 pb-12 w-full font-sans">
-
+    <footer className={`relative bg-primary-dark text-white ${showCta ? 'pt-64 md:pt-70' : 'pt-32'} pb-12 w-full font-sans`}>
       {/* Overlapping CTA Card */}
-      <div className="absolute flex items-end left-1/2 -translate-x-1/2 -top-110 w-[90%] max-w-250 h-full max-h-131.75 bg-primary rounded-3xl p-10 md:p-14 shadow-2xl overflow-hidden border-8 border-white">
-        {/* Pattern overlay (simulated) */}
-        <div className="absolute inset-0  bg-[url(/images/footer_card_vector.png)]"></div>
+      {showCta && (
+        <div className="absolute flex flex-col justify-center left-1/2 -translate-x-1/2 -top-40 md:-top-56 w-[92%] md:w-[90%] max-w-5xl bg-primary rounded-3xl md:rounded-[48px] p-8 sm:p-10 md:p-16 shadow-2xl overflow-hidden border-4 md:border-8 border-white min-h-[320px]">
+          {/* Pattern overlay (simulated) */}
+          <div className="absolute inset-0 bg-[url(/images/footer_card_vector.png)] bg-cover bg-center"></div>
 
-        <div className="relative z-10 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight tracking-tight">
-            Join Us in Building <br /> Africa's Future
-          </h2>
-          <p className="text-white/90 text-sm md:text-base font-light mb-8 max-w-xl leading-relaxed">
-            Re-Skill Africa is open to individuals ready to demonstrate capability, organisations seeking talent and solutions, and partners committed to strengthening Africa's economic future.
-          </p>
+          <div className="relative z-10 max-w-3xl">
+            <h2 className="text-[32px] sm:text-4xl md:text-[52px] font-bold mb-4 sm:mb-6 leading-[1.1] tracking-tight text-white">
+              {ctaTitle}
+            </h2>
+            <p className="text-white/90 text-[15px] md:text-[17px] font-medium sm:font-light mb-8 max-w-2xl leading-relaxed">
+              {ctaDescription}
+            </p>
 
-          <div className="flex flex-wrap gap-4">
-            <ActionButton variant="primary">
-              Get involved
-            </ActionButton>
-            <ActionButton variant="primary">
-              Apply to innovation tournament
-            </ActionButton>
-            <ActionButton variant="primary">
-              Partner with us
-            </ActionButton>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full">
+              {ctaButtons}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="mx-auto px-8 md:px-12 mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">

@@ -50,7 +50,7 @@ export function OurImpact() {
   }, []);
 
   return (
-    <section className="bg-white pt-24 md:pt-32 pb:700 md:pb-200 w-full">
+    <section className="bg-white pt-24 md:pt-32 pb-48 md:pb-100 w-full">
       <div
         ref={containerRef}
         className="max-w-300 mx-auto px-8 md:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24"
@@ -94,7 +94,7 @@ export function OurImpact() {
           className={`flex-1 w-full lg:w-[45%] lg:h-[20%] relative aspect-4/5 rounded-4xl overflow-hidden bg-gray-100 transition-all duration-1000 delay-300 ease-out ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
         >
           <Image
-            src="/images/hero-img.webp"
+            src="/images/our-impact.png"
             alt="Our Impact"
             fill
             className="object-cover"

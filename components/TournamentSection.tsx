@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ActionButton } from "@/components/ActionButton";
 import { motion } from "framer-motion";
 
@@ -84,9 +85,11 @@ export function TournamentSection() {
               Participants are evaluated on their ability to deliver viable solutions under real-world conditions. High performers progress into pathways connecting them with employment, supplier opportunities, and venture development, creating a live system for identifying execution-ready talent at scale.
             </p>
             <div>
-              <ActionButton variant="secondary">
-                Explore the tournament
-              </ActionButton>
+              <Link href="/tournament">
+                <ActionButton variant="secondary">
+                  Explore the tournament
+                </ActionButton>
+              </Link>
             </div>
           </div>
         </div>

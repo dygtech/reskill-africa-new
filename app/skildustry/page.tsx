@@ -156,7 +156,7 @@ export default function SkildustryPage() {
       </section>
 
       {/* Final Note */}
-      <section className="w-full bg-white pt-24 pb-150 px-4 md:px-12 flex flex-col items-center text-center  relative">
+      <section className="w-full bg-white py-24 px-4 md:px-12 flex flex-col items-center text-center  relative">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-sans font-bold leading-[1.2] tracking-tight text-brand-dark mb-8">
             Africa's productive future does not come from more training. <span className="text-primary">It comes from more production.</span>

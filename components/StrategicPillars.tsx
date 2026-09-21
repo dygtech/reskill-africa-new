@@ -6,31 +6,31 @@ const pillars = [
     num: "01",
     title: "Talent Discovery at Scale",
     desc: "A structured system for identifying individuals and teams with strong execution potential across regions. The platform draws participants from diverse backgrounds and surfaces capability through competitive engagement rather than credentials alone.",
-    image: "/images/hero-img.webp"
+    image: "/images/talent-discovery.png"
   },
   {
     num: "02",
-    title: "Talent Discovery at Scale",
-    desc: "A structured system for identifying individuals and teams with strong execution potential across regions. The platform draws participants from diverse backgrounds and surfaces capability through competitive engagement rather than credentials alone.",
-    image: "/images/hero-img.webp"
+    title: "Real world evaluation",
+    desc: "Participants are assessed through challenges that reflect actual industry conditions. Performance is measured based on the ability to deliver viable solutions, operate within constraints, and respond to market realities.",
+    image: "/images/real-world-evaluation.png"
   },
   {
     num: "03",
-    title: "Talent Discovery at Scale",
-    desc: "A structured system for identifying individuals and teams with strong execution potential across regions. The platform draws participants from diverse backgrounds and surfaces capability through competitive engagement rather than credentials alone.",
-    image: "/images/hero-img.webp"
+    title: "Direct Industry Development",
+    desc: "High-performing participants are connected to opportunities within industry. This includes employment pathways, supplier integration, and project-based engagement aligned with sector demand.",
+    image: "/images/direct-industry-development.png"
   },
   {
     num: "04",
-    title: "Talent Discovery at Scale",
-    desc: "A structured system for identifying individuals and teams with strong execution potential across regions. The platform draws participants from diverse backgrounds and surfaces capability through competitive engagement rather than credentials alone.",
-    image: "/images/hero-img.webp"
+    title: "Venture Formation & Growth",
+    desc: "Selected ideas and teams progress into structured venture development. Support is focused on building commercially viable businesses that contribute to production, supply chains, and sector expansion.",
+    image: "/images/venture-formation-growth.png"
   },
   {
     num: "05",
-    title: "Talent Discovery at Scale",
-    desc: "A structured system for identifying individuals and teams with strong execution potential across regions. The platform draws participants from diverse backgrounds and surfaces capability through competitive engagement rather than credentials alone.",
-    image: "/images/hero-img.webp"
+    title: "System Expansion & Access",
+    desc: "As the platform matures, broader participation pathways are introduced to enable more individuals to enter and progress through the system. This ensures continuity in talent supply and long-term scalability.",
+    image: "/images/system-expansion-access.png"
   }
 ];
 
