@@ -44,9 +44,6 @@ export const Navbar = () => {
               <Link href="/leadership" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50 ${pathname === '/leadership' ? 'text-primary bg-gray-50' : 'text-brand-dark'}`}>
                 Leadership
               </Link>
-              <Link href="#" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50 text-brand-dark`}>
-                The Vision
-              </Link>
               <Link href="/partner-with-us" className={`px-4 py-2.5 hover:bg-gray-50 hover:text-primary transition-colors text-[13px] font-medium text-center border-t border-gray-50 ${pathname === '/partner-with-us' ? 'text-primary bg-gray-50' : 'text-brand-dark'}`}>
                 Our Partners
               </Link>
@@ -74,6 +71,9 @@ export const Navbar = () => {
           <Link href="/projects" className={getLinkStyle('/projects')}>Projects</Link>
           <Link href='/tournament' className={`${getLinkStyle('/tournament')}`}>
             Tournament
+          </Link>
+          <Link href='/get-involved' className={`${getLinkStyle('/get-involved')}`}>
+            Get Involved
           </Link>
         </div>
 

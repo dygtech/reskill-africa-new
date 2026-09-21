@@ -23,9 +23,15 @@ export function Footer({
   ctaDescription = "Re-Skill Africa is open to individuals ready to demonstrate capability, organisations seeking talent and solutions, and partners committed to strengthening Africa's economic future.",
   ctaButtons = (
     <>
-      <ActionButton variant="primary">Get involved</ActionButton>
-      <ActionButton variant="primary">Apply to innovation tournament</ActionButton>
-      <ActionButton variant="primary">Partner with us</ActionButton>
+      <Link href="/get-involved">
+        <ActionButton variant="primary">Get involved</ActionButton>
+      </Link>
+      <Link href="/tournament">
+        <ActionButton variant="primary">Apply to innovation tournament</ActionButton>
+      </Link>
+      <Link href="/partner-with-us">
+        <ActionButton variant="primary">Partner with us</ActionButton>
+      </Link>
     </>
   ),
 }: FooterProps) {
