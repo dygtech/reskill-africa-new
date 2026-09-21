@@ -52,7 +52,7 @@ export default function TrainingTracksPage() {
         </section>
 
         {/* ── COMING SOON SECTION ────────────────── */}
-        <section className="w-full pb-32 px-4 md:px-12 flex flex-col items-center">
+        <section className="w-full pb-80 px-4 md:px-12 flex flex-col items-center">
           <div className="max-w-6xl mx-auto w-full">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -82,7 +82,7 @@ export default function TrainingTracksPage() {
         </section>
 
         {/* ── CTA SECTION ────────────────────────── */}
-        <Footer 
+        <Footer
           ctaTitle="Ready to Build Africa's Future?"
           ctaDescription="Join thousands of learners who are already part of Africa's industrial transformation through our Skildustry training tracks."
           ctaButtons={
@@ -95,7 +95,7 @@ export default function TrainingTracksPage() {
                   </div>
                 </button>
               </Link>
-              
+
               <Link href="/skill-passport" className="w-full sm:w-auto">
                 <button className="w-full bg-white text-[#992828] px-6 py-3.5 rounded-full font-medium text-[14px] flex items-center justify-center gap-3 hover:scale-105 transition-transform duration-300 shadow-md">
                   Learn About Skill Passport
