@@ -145,11 +145,9 @@ export default function ProjectsPage() {
           <h2 className="text-[32px] md:text-[44px] font-sans font-bold leading-[1.1] tracking-tight text-brand-dark mb-8">
             Ready to partner with us?
           </h2>
-          <Link href="/contact" passHref legacyBehavior>
-            <ActionButton variant="primary">
-              Explore a project partnership &rarr;
-            </ActionButton>
-          </Link>
+          <ActionButton variant="primary" href="/contact">
+            Explore a project partnership &rarr;
+          </ActionButton>
         </div>
       </section>
 

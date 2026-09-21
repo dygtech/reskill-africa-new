@@ -97,6 +97,7 @@ export function OurImpact() {
             src="/images/our-impact.png"
             alt="Our Impact"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />
         </div>
