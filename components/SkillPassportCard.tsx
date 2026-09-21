@@ -16,24 +16,24 @@ export function SkillPassportCard() {
       initial={{ y: 60, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : {}}
       transition={{ duration: 0.75, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="w-full max-w-[360px] bg-brand-dark rounded-3xl overflow-hidden shadow-2xl"
+      className="w-full relative max-w-90 bg-brand-dark rounded-3xl overflow-hidden shadow-2xl"
     >
+      <div className="absolute inset-0 bg-[url('/images/passport_vector.svg')] bg-cover bg-center pointer-events-none z-0" />
+
       {/* Card top bar */}
-      <div className="flex items-center justify-between px-5 py-3 bg-black/30">
+      <div className="absolute z-50 top-0 flex items-center justify-between px-5 py-3 bg-transparent w-full">
         <div className="flex items-center gap-1.5">
-          <span className="text-white font-bold text-sm tracking-tight">Re-Skill</span>
-          <span className="w-px h-3.5 bg-white/40 mx-1"></span>
-          <span className="text-white/80 font-light text-sm tracking-widest">AFRICA</span>
+          <Image src="/images/logo.svg" alt="Logo" width={100} height={100} />
         </div>
-        <span className="text-white/50 text-[10px] font-mono tracking-wider">
+        <span className="text-black text-[10px] font-mono tracking-wider px-2 py-1 bg-white rounded-2xl w-fit h-fit">
           ID: RSA-SP-2025
         </span>
       </div>
 
       {/* Profile image */}
-      <div className="relative w-full h-[200px]">
+      <div className="relative w-full h-50">
         <Image
-          src="/images/about-section-5.webp"
+          src="/images/passport_img.png"
           alt="Osinachi Chidoka"
           fill
           className="object-cover object-top"
@@ -42,7 +42,7 @@ export function SkillPassportCard() {
       </div>
 
       {/* Card body */}
-      <div className="px-5 pt-2 pb-6">
+      <div className="px-5 pt-2 pb-6 relative z-10">
         <h4 className="text-white font-semibold text-[17px] mb-0.5">Osinachi Chidoka</h4>
         <p className="text-white/60 text-xs mb-0.5">Sector: Renewable Energy</p>
         <p className="text-white/60 text-xs mb-4">
@@ -56,7 +56,7 @@ export function SkillPassportCard() {
           {["Solar Installation", "System Design", "Maintenance", "Energy Audit"].map((skill) => (
             <span
               key={skill}
-              className="flex items-center gap-1 bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[11px] font-medium"
+              className="flex items-center gap-1 bg-white text-black rounded-2xl w-fit h-fit px-3 py-1 text-[11px] font-medium"
             >
               <CheckCircle size={10} className="text-primary shrink-0" />
               {skill}
