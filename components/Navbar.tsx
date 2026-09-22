@@ -9,6 +9,8 @@ import { usePathname } from 'next/navigation';
 export const Navbar = () => {
   const pathname = usePathname();
 
+  if (['/login', '/register'].includes(pathname)) return null;
+
   // Add any other routes that have a white background here
   const lightModeRoutes = ['/about', '/skildustry', '/projects'];
   const isLightMode = lightModeRoutes.includes(pathname);
@@ -85,13 +87,15 @@ export const Navbar = () => {
           <button className={`flex items-center gap-2 font-sans font-normal text-[14px] leading-4.5 tracking-[-0.04em] ${navHoverColor} transition-colors`}>
             <Languages size={20} className="opacity-90" strokeWidth={1.5} /> English
           </button>
-          <Button 
-            className={['/training-tracks', '/tournament', '/skill-passport'].includes(pathname) 
-              ? "!bg-[#232323] hover:!bg-[#111] !shadow-[0px_4px_10px_rgba(0,0,0,0.25),inset_0px_4px_8px_rgba(255,255,255,0.1),inset_0px_-6px_12px_rgba(0,0,0,0.6)] hover:!shadow-[0px_6px_12px_rgba(0,0,0,0.3),inset_0px_4px_8px_rgba(255,255,255,0.15),inset_0px_-6px_12px_rgba(0,0,0,0.6)] active:!shadow-[0px_2px_4px_rgba(0,0,0,0.25),inset_0px_2px_4px_rgba(255,255,255,0.1),inset_0px_-2px_6px_rgba(0,0,0,0.5)]"
-              : ""}
-          >
-            Login
-          </Button>
+          <Link href="/login">
+            <Button 
+              className={['/training-tracks', '/tournament', '/skill-passport'].includes(pathname) 
+                ? "!bg-[#232323] hover:!bg-[#111] !shadow-[0px_4px_10px_rgba(0,0,0,0.25),inset_0px_4px_8px_rgba(255,255,255,0.1),inset_0px_-6px_12px_rgba(0,0,0,0.6)] hover:!shadow-[0px_6px_12px_rgba(0,0,0,0.3),inset_0px_4px_8px_rgba(255,255,255,0.15),inset_0px_-6px_12px_rgba(0,0,0,0.6)] active:!shadow-[0px_2px_4px_rgba(0,0,0,0.25),inset_0px_2px_4px_rgba(255,255,255,0.1),inset_0px_-2px_6px_rgba(0,0,0,0.5)]"
+                : ""}
+            >
+              Login
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

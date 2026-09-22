@@ -3,6 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ActionButton } from "./ActionButton";
 import { ReactNode } from "react";
 
@@ -17,7 +18,7 @@ export function Footer({
   showCta = true,
   ctaTitle = (
     <>
-      Join Us in Building <br /> Africa's Future
+      Join Us in Building <br /> Africa&apos;s Future
     </>
   ),
   ctaDescription = "Re-Skill Africa is open to individuals ready to demonstrate capability, organisations seeking talent and solutions, and partners committed to strengthening Africa's economic future.",
@@ -35,6 +36,9 @@ export function Footer({
     </>
   ),
 }: FooterProps) {
+  const pathname = usePathname();
+  if (['/login', '/register'].includes(pathname)) return null;
+
   return (
     <footer className={`relative bg-primary-dark text-white ${showCta ? 'pt-64 md:pt-70' : 'pt-32'} pb-12 w-full font-sans`}>
       {/* Overlapping CTA Card */}
