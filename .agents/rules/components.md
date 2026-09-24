@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 # Component Guidelines
 
 ## Reusable Components

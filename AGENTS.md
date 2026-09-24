@@ -7,3 +7,19 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Project Specific Rules
+
+### Database & ORM
+- **Prisma**: We use Prisma ORM.
+- **Database**: We use Neon Serverless PostgreSQL. 
+- **Adapter**: Always use the `@prisma/adapter-pg` and `pg` packages when initializing Prisma Client so it works well in serverless environments.
+
+### Forms & Validation
+- **React Hook Form**: Use `react-hook-form` for all form state management.
+- **Zod**: Use `zod` for all schema validation (both frontend and API routes/Server Actions).
+- **Resolver**: Use `@hookform/resolvers/zod` to connect Zod schemas to React Hook Form.
+
+### Theming
+- **Next-Themes**: Use `next-themes` to manage Light/Dark mode toggles.
+- **Tailwind**: Use the `dark:` variant or CSS variables mapped to Tailwind colors for styling dark mode components.
