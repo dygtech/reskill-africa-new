@@ -1,76 +1,64 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { SectionLabel, RedButton } from "@/components/ui/SharedUI";
+import { WorldMap } from "@/components/ui/WorldMap";
 
 const tabs = [
   {
-    id: "urban",
-    label: "URBAN HUBS",
-    description:
-      "RSA establishes training and production hubs in major cities, connecting talent to local industries with hands-on programmes and direct employment pathways.",
+    id: "local",
+    label: "LOCAL WORK",
   },
   {
     id: "remote",
     label: "GLOBAL REMOTE WORK",
-    description:
-      "Verified RSA talent is matched with remote opportunities at global companies, bringing income and skills development without relocation.",
   },
   {
     id: "enterprise",
     label: "ENTERPRISE",
-    description:
-      "RSA works with enterprises to build custom workforce solutions, deploying trained talent directly into production environments.",
   },
   {
     id: "mobility",
-    label: "STRUCTURE TALENT MOBILITY",
-    description:
-      "Structured mobility pathways connect talent to opportunities across regions and borders, supported by verification and compliance systems.",
+    label: "STRUCTURED TALENT MOBILITY",
   },
 ];
 
 export function BuildOpportunitySection() {
   return (
-    <section className="w-full bg-white py-20 md:py-28 overflow-hidden border-b border-rsa-gray-200">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+    <section className="relative w-full bg-[#fcfcfb] py-12 md:py-16 overflow-hidden border-b border-rsa-gray-200 z-10">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 relative">
         <SectionLabel number="07">AFRICA + THE WORLD</SectionLabel>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
+
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8 mb-16 relative">
+
+          {/* Ant line is now handled internally by WorldMap for perfect responsiveness */}
+
           {/* Left: Heading */}
-          <div>
+          <div className="lg:w-[45%] shrink-0">
             <h2 className="text-rsa-black text-[40px] sm:text-[48px] md:text-[56px] font-bold leading-[1.05] tracking-[-0.03em]">
-              Build opportunity<br />where people are.<br />Connect capability<br />wherever demand exists.
+              Build opportunity<br />where people are.<br />Connect capability<br /><span className="whitespace-nowrap">wherever demand exists.</span>
             </h2>
           </div>
 
-          {/* Right: Text and Button */}
-          <div className="pt-4 lg:pt-10 relative">
-            <p className="text-rsa-gray-500 text-[15px] leading-relaxed mb-6 max-w-md font-medium">
-              RSA works with governments, industry, and international partners to build
-              demand-led pathways, connecting African capability to productive opportunity.
+          {/* Middle: Text and Button */}
+          <div className="lg:w-[25%] pt-4 lg:pt-0 shrink-0 self-center">
+            <p className="text-rsa-gray-500 text-[14px] leading-relaxed mb-6 font-medium max-w-[420px]">
+              RSA works with governments, industry, and international partners to build demand-led pathways,<br className="hidden 2xl:block" /> connecting African capability to productive opportunity.
             </p>
-            <RedButton href="/partner-with-us" variant="outline" className="!text-rsa-red !border-transparent hover:!bg-transparent hover:!text-rsa-red-dark px-0 py-0">
+            <RedButton href="/partner-with-us" variant="outline" className="text-rsa-red! border-transparent! hover:bg-transparent! hover:text-rsa-red-dark! px-0 py-0 text-[13px]!">
               BUILD A PARTNERSHIP ↗
             </RedButton>
-            
-            {/* Map image overlaying right area */}
-            <div className="absolute -right-20 top-0 w-[400px] h-[300px] opacity-30 pointer-events-none hidden lg:block">
-              <Image
-                src="/images/world-map.png" // Placeholder
-                alt="World Map"
-                fill
-                className="object-contain"
-              />
-            </div>
+          </div>
+
+          {/* Right: World Map */}
+          <div className="lg:w-[35%] w-full flex justify-end">
+            <WorldMap className="w-[500px] lg:w-[650px] shrink-0 lg:-mr-12 opacity-90" />
           </div>
         </div>
 
         {/* Tab Links Row */}
         <div className="flex flex-wrap items-center justify-between border-t border-rsa-gray-200 pt-6">
           {tabs.map((tab) => (
-            <div key={tab.id} className="text-[12px] font-bold tracking-[0.08em] uppercase text-rsa-black cursor-pointer hover:text-rsa-red transition-colors">
+            <div key={tab.id} className="text-[11px] sm:text-[12px] font-bold tracking-[0.08em] uppercase text-rsa-black">
               {tab.label}
             </div>
           ))}

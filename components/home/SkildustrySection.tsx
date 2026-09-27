@@ -17,13 +17,29 @@ const statements = [
 
 export function SkildustrySection() {
   return (
-    <section className="w-full bg-[#111111] py-20 md:py-28 overflow-hidden text-white">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
-        {/* Top area: text + image */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
-          {/* Left: text */}
-          <div>
-            <SectionLabel number="03" className="!text-white/50">SKILDUSTRY™</SectionLabel>
+    <section className="w-full bg-brand-dark py-20 overflow-hidden text-white">
+      <div className="max-w-360 mx-auto px-6 md:px-10 lg:px-14">
+        {/* Top area: text + background image */}
+        <div className="relative flex items-center min-h-112.5 mb-16 py-8">
+          {/* Background image on the right side */}
+          <div className="absolute inset-0 lg:left-[25%] z-0 overflow-hidden rounded-r-xl">
+            {/* Gradient to fade seamlessly from the left side into the dark background */}
+            <div className="absolute inset-0 bg-linear-to-r from-brand-dark via-brand-dark/40 to-transparent z-10" />
+            <div className="absolute inset-y-0 left-0 w-1/3 bg-linear-to-r from-brand-dark to-transparent z-10" />
+
+            <Image
+              src="/images/classroom.png"
+              alt="Industry classroom"
+              fill
+              sizes="(max-width: 1024px) 100vw, 75vw"
+              className="object-cover object-center lg:object-right opacity-90"
+              priority
+            />
+          </div>
+
+          {/* Left: text (Foreground) */}
+          <div className="relative z-20 w-full lg:w-1/2">
+            <SectionLabel number="03" className="text-white/50!">SKILDUSTRY™</SectionLabel>
             <h2 className="text-white text-[40px] sm:text-[48px] md:text-[56px] font-bold leading-[1.05] tracking-[-0.02em] mb-6">
               Where Industry<br />Becomes the<br />
               <span className="text-rsa-red">Classroom.</span>
@@ -40,17 +56,6 @@ export function SkildustrySection() {
               EXPLORE SKILDUSTRY ↗
             </RedButton>
           </div>
-
-          {/* Right: image */}
-          <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden bg-rsa-gray-800">
-            <Image
-              src="/images/about-section-2.webp"
-              alt="Industry classroom"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
         </div>
 
         {/* Statements row */}
@@ -66,19 +71,17 @@ export function SkildustrySection() {
         </div>
 
         {/* Pipeline flow */}
-        <div className="flex items-center justify-between px-10 gap-2 md:gap-4 flex-wrap">
-          {pipeline.map((step, i) => (
-            <div key={step.label} className="flex items-center gap-4 w-full md:w-auto flex-1 justify-between md:justify-center">
-              <span className="text-white text-[14px] md:text-[16px] font-bold tracking-[0.1em] uppercase">
-                {step.label}
-              </span>
-              {i < pipeline.length - 1 && (
-                <div className="flex-1 md:flex-none md:w-20 mx-4 h-[1px] bg-rsa-red/50 relative">
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-l-[6px] border-l-rsa-red border-b-[4px] border-b-transparent"></div>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-10 gap-6 md:gap-0 w-full">
+          {pipeline.map((step, i) => [
+            <span key={`text-${step.label}`} className="text-white text-[14px] md:text-[16px] font-bold tracking-[0.1em] uppercase shrink-0">
+              {step.label}
+            </span>,
+            i < pipeline.length - 1 && (
+              <div key={`arrow-${step.label}`} className="hidden md:block flex-1 mx-4 lg:mx-8 h-[1px] bg-rsa-red/50 relative">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-l-[6px] border-l-rsa-red border-b-[4px] border-b-transparent"></div>
+              </div>
+            )
+          ])}
         </div>
       </div>
     </section>
