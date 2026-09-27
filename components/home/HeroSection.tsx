@@ -69,7 +69,9 @@ export function HeroSection() {
             </span>
           </div>
           <a
-            href="/register"
+            href="https://idicesebpo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white text-[12px] font-bold tracking-[0.06em] uppercase hover:text-rsa-red transition-colors flex items-center gap-1"
           >
             REGISTER NOW ↗

@@ -20,17 +20,17 @@ export function NewNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 40);
+  });
+
   // Hide on auth pages
   if (["/login", "/register"].includes(pathname)) return null;
 
   // Pages where the nav sits on a white background (not over a hero)
   const lightPages = ["/about", "/skildustry", "/projects"];
   const isLightPage = lightPages.includes(pathname);
-
-  const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 40);
-  });
 
   const showSolid = scrolled || isLightPage;
   const textColor = "text-white";
@@ -79,12 +79,14 @@ export function NewNavbar() {
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-4">
-              <Link
-                href="/register"
+              <a
+                href="https://idicesebpo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center gap-2 bg-rsa-red text-white text-[12px] font-bold uppercase px-5 py-2.5 rounded-sm hover:bg-rsa-red-dark transition-colors"
               >
                 <span><span className="lowercase">i</span>DICE REGISTER ↗</span>
-              </Link>
+              </a>
 
               {/* Mobile hamburger */}
               <button
@@ -115,13 +117,15 @@ export function NewNavbar() {
             ))}
           </div>
           <div className="mt-8">
-            <Link
-              href="/register"
+            <a
+              href="https://idicesebpo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="inline-flex items-center justify-center w-full bg-rsa-red text-white text-[13px] font-bold uppercase px-6 py-4 rounded-sm hover:bg-rsa-red-dark transition-colors"
             >
               <span><span className="lowercase">i</span>DICE REGISTER ↗</span>
-            </Link>
+            </a>
           </div>
         </div>
       )}
