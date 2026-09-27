@@ -118,9 +118,9 @@ export function NewNavbar() {
             <Link
               href="/register"
               onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center justify-center w-full bg-rsa-red text-white text-[13px] font-bold tracking-[0.08em] uppercase px-6 py-4 rounded-sm hover:bg-rsa-red-dark transition-colors"
+              className="inline-flex items-center justify-center w-full bg-rsa-red text-white text-[13px] font-bold uppercase px-6 py-4 rounded-sm hover:bg-rsa-red-dark transition-colors"
             >
-              iDICE REGISTER ↗
+              <span><span className="lowercase">i</span>DICE REGISTER ↗</span>
             </Link>
           </div>
         </div>
