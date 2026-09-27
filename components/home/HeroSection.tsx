@@ -20,7 +20,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-360 mx-auto w-full px-6 md:px-10 lg:px-14 pt-24 pb-20">
+      <div className="relative z-10 max-w-360 mx-auto w-full px-6 md:px-10 lg:px-14 pt-24 pb-36 md:pb-24">
         {/* Top tag */}
         <span className="inline-block text-[12px] font-bold tracking-widest uppercase text-[#F2C94C] mb-4">
           RE-SKILL AFRICA
