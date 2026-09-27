@@ -23,7 +23,7 @@ export default function Home() {
       <ProductivityPipelineSection />
       <ProofSection />
       <FutureCTASection />
-      <NewFooter />
+      {/* <NewFooter /> */}
     </>
   );
 }

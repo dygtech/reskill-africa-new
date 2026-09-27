@@ -81,9 +81,9 @@ export function NewNavbar() {
             <div className="flex items-center gap-4">
               <Link
                 href="/register"
-                className="hidden sm:inline-flex items-center gap-2 bg-rsa-red text-white text-[12px] font-bold tracking-[0.08em] uppercase px-5 py-2.5 rounded-sm hover:bg-rsa-red-dark transition-colors"
+                className="hidden sm:inline-flex items-center gap-2 bg-rsa-red text-white text-[12px] font-bold uppercase px-5 py-2.5 rounded-sm hover:bg-rsa-red-dark transition-colors"
               >
-                iDICE REGISTER ↗
+                <span><span className="lowercase">i</span>DICE REGISTER ↗</span>
               </Link>
 
               {/* Mobile hamburger */}

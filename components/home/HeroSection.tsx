@@ -57,7 +57,10 @@ export function HeroSection() {
         <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between px-6 md:px-10 lg:px-14 py-4 gap-4">
           <div className="flex items-center gap-3 text-[12px] sm:text-[13px] font-medium tracking-wide">
             <span className="inline-flex items-center gap-2 text-white">
-              <span className="w-2.5 h-2.5 bg-rsa-red rounded-full" />
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rsa-red opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-rsa-red"></span>
+              </span>
               NOW LIVE — iDICE SOUTH EAST
             </span>
             <span className="hidden md:inline text-white/50 px-2">|</span>

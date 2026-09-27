@@ -1,94 +1,95 @@
 import Image from "next/image";
 import { ArrowLink, SectionLabel } from "@/components/ui/SharedUI";
 
-const proofCards = [
-  {
-    tag: "iDICE",
-    tagSub: "SOUTH EAST",
-    title: "Live Implementation",
-    image: "/images/about-section-1.webp",
-  },
-  {
-    tag: "KABILANA",
-    tagSub: "",
-    title: "Post RSA Proof Zone",
-    image: "/images/about-section-5.webp",
-  },
-];
-
 export function ProofSection() {
   return (
-    <section className="w-full bg-[#fdfdfd] py-20 md:py-28 overflow-hidden border-b border-rsa-gray-200">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+    <section className="w-full bg-[#fdfdfd] py-20 relative overflow-hidden border-b border-rsa-gray-200">
+
+      {/* Background Image on the right */}
+      <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[45%] z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-linear-to-r from-[#fdfdfd] via-[#fdfdfd]/70 to-transparent z-10" />
+        <Image
+          src="/images/about-section-5.webp"
+          alt="Construction worker"
+          fill
+          className="object-cover object-[center_30%]"
+        />
+      </div>
+
+      <div className="max-w-360 mx-auto px-6 md:px-10 lg:px-14 relative z-10">
         <SectionLabel number="09">PROOF</SectionLabel>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end">
-          {/* Left: Stats */}
-          <div>
-            <h2 className="text-rsa-black text-[40px] sm:text-[48px] md:text-[56px] font-bold leading-[1.05] tracking-[-0.03em] mb-12">
-              From proposition
-              <br />
+
+        {/* Main Layout Row */}
+        <div className="flex flex-col lg:flex-row w-full mt-8">
+
+          {/* Left Block: Heading and 8,000 */}
+          <div className="w-full lg:w-85 shrink-0">
+            <h2 className="text-[36px] sm:text-[44px] font-bold text-rsa-black leading-[1.05] tracking-[-0.03em] mb-4">
+              From proposition<br />
               to <span className="text-rsa-red">proof.</span>
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-6">
-              {/* Stat 1 */}
-              <div>
-                <span className="text-[48px] md:text-[56px] font-bold text-rsa-black leading-none tracking-tight">
-                  8,000
-                </span>
-                <p className="text-rsa-black text-[14px] leading-relaxed mt-2 max-w-[200px] font-medium">
-                  Connected to work through prior programme experience.*
-                </p>
+            <div className="mt-8">
+              <div className="text-[40px] font-bold text-rsa-black leading-none tracking-tight">
+                8,000
               </div>
-              {/* Stat 2 */}
+              <p className="text-[13px] text-rsa-gray-600 mt-2 font-medium leading-snug">
+                Connected to work through<br />prior programme experience.*
+              </p>
+              <div className="mt-6">
+                <ArrowLink href="/projects" color="red" className="text-[11px] font-bold">
+                  VIEW OUR WORK ↗
+                </ArrowLink>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Block: 3 Stats Columns */}
+          <div className="flex-1 flex flex-col sm:flex-row gap-10 lg:gap-8 lg:mt-[128px] mt-10">
+
+            {/* 72% */}
+            <div className="flex gap-8">
+              <div className="w-[1px] h-12 bg-rsa-red/40 hidden sm:block mt-3"></div>
               <div>
-                <span className="text-[48px] md:text-[56px] font-bold text-rsa-black leading-none tracking-tight">
+                <div className="text-[32px] font-bold text-rsa-black leading-none tracking-tight">
                   72%
-                </span>
-                <p className="text-rsa-black text-[14px] leading-relaxed mt-2 max-w-[200px] font-medium">
-                  Women among those outcomes.*
+                </div>
+                <p className="text-[13px] text-rsa-gray-600 mt-2 font-medium leading-snug">
+                  Women among<br />those outcomes.*
+                </p>
+                <p className="text-[9px] text-rsa-gray-400 mt-8">
+                  * Source and context to be supplied.
                 </p>
               </div>
             </div>
 
-            <ArrowLink href="/projects" color="red" className="!text-[12px] mb-4">
-              VIEW OUR WORK ↗
-            </ArrowLink>
-            <p className="text-[10px] text-rsa-gray-400 mt-2">*Source and context to be supplied</p>
-          </div>
-
-          {/* Right: Proof cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 h-full items-end pb-8">
-            <div className="relative rounded-md overflow-hidden bg-rsa-gray-100 aspect-square">
-                {/* Simulated map background for iDICE */}
-                <div className="absolute inset-0 bg-[#e8e8e8] flex items-center justify-center text-rsa-gray-300">
-                   Map Placeholder
+            {/* iDICE */}
+            <div className="flex gap-8">
+              <div className="w-[1px] h-12 bg-rsa-red/40 hidden sm:block mt-3"></div>
+              <div className="mt-1.5">
+                <div className="text-[16px] font-extrabold text-rsa-black leading-tight tracking-tight uppercase">
+                  iDICE<br />SOUTH EAST
                 </div>
-                <div className="absolute top-5 left-5 right-5 z-10">
-                  <span className="text-rsa-black text-[13px] font-bold tracking-[0.08em] uppercase block">
-                    iDICE<br/>SOUTH EAST
-                  </span>
-                  <p className="text-rsa-gray-600 text-[12px] mt-1 font-medium">Live Implementation.</p>
-                </div>
+                <p className="text-[13px] text-rsa-gray-600 mt-3 font-medium">
+                  Live implementation.
+                </p>
+              </div>
             </div>
 
-            <div className="relative rounded-md overflow-hidden bg-rsa-gray-100 aspect-square">
-                <Image
-                  src="/images/about-section-5.webp"
-                  alt="KEBULANIA"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 z-10">
-                  <span className="text-white text-[13px] font-bold tracking-[0.08em] uppercase block">
-                    KEBULANIA
-                  </span>
-                  <p className="text-white/90 text-[12px] mt-1 font-medium">First RSA Proof Zone.</p>
+            {/* KEBULANIA */}
+            <div className="flex gap-8">
+              <div className="mt-1.5 sm:pl-4">
+                <div className="text-[16px] font-extrabold text-rsa-black leading-tight tracking-tight uppercase">
+                  KEBULANIA
                 </div>
+                <p className="text-[13px] text-rsa-gray-600 mt-3 font-medium">
+                  First RSA Proof Zone.
+                </p>
+              </div>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
