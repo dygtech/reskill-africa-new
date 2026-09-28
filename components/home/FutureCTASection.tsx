@@ -31,12 +31,12 @@ export function FutureCTASection() {
         <div>
           <SectionLabel number="10" className="!text-white/60 !border-rsa-red">THE FUTURE</SectionLabel>
 
-          <h2 className="text-white text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-bold leading-[1.05] tracking-[-0.03em] mb-4 mt-6 max-w-[800px]">
+          <h2 className="text-white text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-bold leading-[1.05] tracking-[-0.03em] mb-4 mt-6">
             The future of work will be global.<br />
             Africa must be ready to <span className="text-rsa-red">build it.</span>
           </h2>
 
-          <div className="flex flex-wrap items-center gap-y-2 text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-white/80 uppercase mb-6 max-w-[800px]">
+          <div className="flex flex-wrap items-center gap-y-2 text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-white/80 uppercase mb-6 max-w-200">
             {partnerTypes.map((type, i) => (
               <React.Fragment key={type}>
                 <span>{type}</span>
