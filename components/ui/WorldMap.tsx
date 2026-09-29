@@ -480,7 +480,7 @@ export function WorldMap({ className }: { className?: string }) {
       <div className="absolute inset-0 pointer-events-none">
         <svg viewBox="0 0 1000 500" fill="none" className="w-full h-full overflow-visible">
           {/* Main dynamic ant line from beneath Enterprise text to South America node (250, 350) */}
-          <path d="M 120 580 Q 100 450 250 350" stroke="#a40000" strokeWidth="1.5" strokeDasharray="4 4" fill="none" className="opacity-60" />
+          <path d="M -450 580 Q -100 500 250 350" stroke="#a40000" strokeWidth="1.5" strokeDasharray="4 4" fill="none" className="opacity-60" />
 
           {/* Ant lines (bezier curves) connecting Africa to other nodes */}
           <path d="M 500 250 Q 550 150 650 150" stroke="#a40000" strokeWidth="1.5" strokeDasharray="4 4" fill="none" className="opacity-60" />

@@ -78,7 +78,8 @@ export function ProofSection() {
 
             {/* KEBULANIA */}
             <div className="flex gap-8">
-              <div className="mt-1.5 sm:pl-4">
+              <div className="w-[1px] h-12 bg-rsa-red/40 hidden sm:block mt-3"></div>
+              <div className="mt-1.5">
                 <div className="text-[16px] font-extrabold text-rsa-black leading-tight tracking-tight uppercase">
                   KEBULANIA
                 </div>
