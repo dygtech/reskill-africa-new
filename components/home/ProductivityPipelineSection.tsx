@@ -33,22 +33,22 @@ export function ProductivityPipelineSection() {
         </h2>
 
         {/* Pipeline steps */}
-        <div className="relative mb-2">
-          <div className="flex items-start justify-between relative z-10 max-w-[1050px] mx-auto w-full">
+        <div className="relative mb-10 md:mb-2">
+          <div className="grid grid-cols-4 gap-y-6 md:flex md:items-start md:justify-between relative z-10 max-w-[1050px] mx-auto w-full">
             {steps.map((step, i) => (
               <React.Fragment key={step.label}>
-                <div className="flex flex-col items-center relative z-10 w-16 shrink-0">
+                <div className="flex flex-col items-center relative z-10 w-full md:w-16 shrink-0">
                   {/* Circle with icon */}
-                  <div className="w-[52px] h-[52px] rounded-full border-[1.5px] border-rsa-red bg-white flex items-center justify-center mb-3">
-                    <step.icon className="w-6 h-6 text-rsa-red" strokeWidth={1.5} />
+                  <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] rounded-full border-[1.5px] border-rsa-red bg-white flex items-center justify-center mb-2 md:mb-3">
+                    <step.icon className="w-5 h-5 sm:w-6 sm:h-6 text-rsa-red" strokeWidth={1.5} />
                   </div>
-                  <span className="text-[9px] font-extrabold tracking-[0.1em] uppercase text-rsa-black text-center leading-tight">
+                  <span className="text-[8px] sm:text-[9px] font-extrabold tracking-wider md:tracking-[0.1em] uppercase text-rsa-black text-center leading-tight">
                     {step.label}
                   </span>
                 </div>
                 {/* Arrow between steps */}
                 {i < steps.length - 1 && (
-                  <div className="flex-1 flex items-center justify-center mt-[25px] px-1 lg:px-2 min-w-[16px]">
+                  <div className="hidden md:flex flex-1 items-center justify-center mt-[25px] px-1 lg:px-2 min-w-[16px]">
                     <div className="w-full h-[1px] bg-rsa-red/50 relative">
                       <div className="absolute right-[-2px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[3.5px] border-t-transparent border-l-[5px] border-l-rsa-red/80 border-b-[3.5px] border-b-transparent"></div>
                     </div>
@@ -60,7 +60,7 @@ export function ProductivityPipelineSection() {
         </div>
 
         {/* Tree Bracket SVG */}
-        <div className="w-full max-w-[1050px] mx-auto h-[40px] relative mb-2 pointer-events-none">
+        <div className="hidden md:block w-full max-w-[1050px] mx-auto h-[40px] relative mb-2 pointer-events-none">
           <svg className="w-full h-full" viewBox="0 0 1000 40" preserveAspectRatio="none">
             {/* Vertical drop exactly from the center (between DEPLOY and TRACK) */}
             <line x1="500" y1="0" x2="500" y2="20" stroke="#a40000" strokeWidth="1.5" className="opacity-40" />

@@ -48,7 +48,7 @@ export function IDiceSouthEastSection() {
 
           {/* Middle: Map visual */}
           <div className="lg:col-span-7 flex items-center justify-center lg:justify-start">
-            <NigeriaMap className="w-[350px] md:w-[450px] h-auto" />
+            <NigeriaMap className="w-full max-w-[320px] sm:max-w-[350px] md:max-w-[450px] h-auto" />
           </div>
         </div>
       </div>

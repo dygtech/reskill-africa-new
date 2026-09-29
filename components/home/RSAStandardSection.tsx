@@ -56,11 +56,11 @@ export function RSAStandardSection() {
         </div>
 
         {/* Attributes row */}
-        <div className="w-full lg:w-[75%] grid grid-cols-3 sm:grid-cols-6 border border-rsa-gray-200 mb-10">
+        <div className="w-full lg:w-[75%] grid grid-cols-3 sm:grid-cols-6 sm:border border-rsa-gray-200 mb-10">
           {attributes.map((attr, i) => (
             <div
               key={attr}
-              className={`py-3 lg:py-4 flex items-center justify-center text-[13px] lg:text-[14px] font-medium text-rsa-black text-center ${i < attributes.length - 1 ? 'border-r border-rsa-gray-200' : ''}`}
+              className={`py-3 lg:py-4 flex items-center justify-center text-[13px] lg:text-[14px] font-medium text-rsa-black text-center ${i < attributes.length - 1 ? 'sm:border-r border-rsa-gray-200' : ''}`}
             >
               {attr}
             </div>

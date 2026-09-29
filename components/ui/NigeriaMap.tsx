@@ -44,7 +44,7 @@ export function NigeriaMap({ className }: { className?: string }) {
         {/* Ant line pointing from South-East region to label */}
         <path d="M 460 620 Q 600 520 730 535" stroke="#a40000" strokeWidth="3" strokeDasharray="6 6" fill="none" />
       </svg>
-      
+
       {/* Some red dots as seen in the design */}
       <div className="absolute top-[20%] left-[30%] w-2 h-2 bg-rsa-red rounded-full shadow-[0_0_8px_rgba(164,0,0,0.8)]" />
       <div className="absolute top-[35%] left-[60%] w-1.5 h-1.5 bg-rsa-red rounded-full shadow-[0_0_8px_rgba(164,0,0,0.8)]" />
@@ -52,15 +52,15 @@ export function NigeriaMap({ className }: { className?: string }) {
       <div className="absolute top-[60%] left-[20%] w-1.5 h-1.5 bg-rsa-red rounded-full shadow-[0_0_8px_rgba(164,0,0,0.8)]" />
       <div className="absolute top-[80%] left-[65%] w-1.5 h-1.5 bg-rsa-red rounded-full shadow-[0_0_8px_rgba(164,0,0,0.8)]" />
       <div className="absolute top-[35%] left-[80%] w-2 h-2 bg-rsa-red rounded-full shadow-[0_0_8px_rgba(164,0,0,0.8)]" />
-      
+
       {/* Map Pin Label */}
       <div className="absolute top-[65%] left-[73%] flex flex-col items-start gap-1">
-        <div className="flex items-center gap-2">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-rsa-red flex-shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <svg viewBox="0 0 24 24" fill="none" className="text-rsa-red shrink-0 w-5 h-5 sm:w-6 sm:h-6">
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor" />
           </svg>
-          <div className="text-[14px] font-bold text-rsa-black uppercase leading-tight tracking-[0.05em] whitespace-nowrap">
-            South-East<br/>Nigeria
+          <div className="text-[10px] sm:text-[14px] font-bold text-rsa-black uppercase leading-tight tracking-wider whitespace-nowrap">
+            South-East<br />Nigeria
           </div>
         </div>
       </div>

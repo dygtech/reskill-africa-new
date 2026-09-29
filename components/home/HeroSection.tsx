@@ -53,8 +53,8 @@ export function HeroSection() {
       </div>
 
       {/* Bottom banner */}
-      <div className="absolute bottom-0 left-0 w-full bg-[#111111] border-t border-white/10 z-20">
-        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between px-6 md:px-10 lg:px-14 py-4 gap-4">
+      <div className="absolute bottom-0 left-0 w-full bg-brand-dark border-t border-white/10 z-20">
+        <div className="max-w-360 mx-auto flex flex-col sm:flex-row items-center justify-between px-6 md:px-10 lg:px-14 py-4 gap-4">
           <div className="flex items-center gap-3 text-[12px] sm:text-[13px] font-medium tracking-wide">
             <span className="inline-flex items-center gap-2 text-white">
               <span className="relative flex h-2.5 w-2.5">
