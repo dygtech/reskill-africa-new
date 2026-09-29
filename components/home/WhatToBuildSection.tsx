@@ -3,21 +3,21 @@ import { SectionLabel, ArrowLink } from "@/components/ui/SharedUI";
 
 const cards = [
   {
-    image: "/images/about-section-1.webp",
+    image: "/images/blog-img-1.png",
     title: "BUILD A WORKFORCE",
     description:
       "Demand-led workforce systems for companies and industries.",
     href: "/skildustry",
   },
   {
-    image: "/images/about-section-4.webp",
+    image: "/images/blog-img-2.png",
     title: "ACCESS AFRICAN TALENT",
     description:
       "Verified talent and a global-service standard for employers.",
     href: "/skill-passport",
   },
   {
-    image: "/images/about-section-5.webp",
+    image: "/images/blog-img-3.png",
     title: "BUILD PRODUCTIVE ECOSYSTEMS",
     description:
       "Talent, enterprise and industry systems for governments and institutional partners.",

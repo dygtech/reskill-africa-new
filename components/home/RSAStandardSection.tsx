@@ -20,11 +20,11 @@ export function RSAStandardSection() {
         <div className="absolute inset-y-0 left-0 w-2/3 bg-linear-to-r from-[#fdfdfd] via-[#fdfdfd]/90 to-transparent z-10" />
 
         <Image
-          src="/images/about-section-3.webp"
+          src="/images/skill.png"
           alt="RSA Standard"
           fill
           sizes="(max-width: 1024px) 100vw, 40vw"
-          className="object-cover object-left"
+          className="object-contain object-right"
           priority
         />
       </div>

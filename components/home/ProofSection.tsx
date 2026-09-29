@@ -9,7 +9,7 @@ export function ProofSection() {
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[45%] z-0 pointer-events-none">
         <div className="absolute inset-0 bg-linear-to-r from-[#fdfdfd] via-[#fdfdfd]/70 to-transparent z-10" />
         <Image
-          src="/images/about-section-5.webp"
+          src="/images/proof.png"
           alt="Construction worker"
           fill
           className="object-cover object-[center_30%]"
