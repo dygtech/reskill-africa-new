@@ -61,7 +61,7 @@ export function HeroSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rsa-red opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-rsa-red"></span>
               </span>
-              NOW LIVE — iDICE SOUTH EAST
+              <span className="animate-pulse">NOW LIVE — iDICE SOUTH EAST</span>
             </span>
             <span className="hidden md:inline text-white/50 px-2">|</span>
             <span className="hidden md:inline text-white/70">
