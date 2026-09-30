@@ -54,7 +54,7 @@ export function TournamentHero() {
         </motion.p>
 
         {/* CTAs — fade in last */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
@@ -66,7 +66,7 @@ export function TournamentHero() {
           <Link href="/contact">
             <ActionButton variant="secondary">Partner with us</ActionButton>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

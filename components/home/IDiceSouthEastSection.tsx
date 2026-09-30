@@ -37,7 +37,7 @@ export function IDiceSouthEastSection() {
               Access current opportunities across the creative and digital economy.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-6">
-              <RedButton href="https://idicesebpo.com/" variant="filled" className="px-8 py-3 rounded-full">
+              <RedButton href="https://idice.ng/skills-training-to-jobs" variant="filled" className="px-8 py-3 rounded-full">
                 REGISTER NOW ↗
               </RedButton>
               <ArrowLink href="/partner-with-us" color="black" className="text-xs!">
