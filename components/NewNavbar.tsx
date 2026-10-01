@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -19,10 +19,43 @@ export function NewNavbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const { scrollY } = useScroll();
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const updateHomeNavigation = () => {
+      const mainContent = document.getElementById("home-main");
+      if (!mainContent) return;
+
+      const hasReachedMainContent = mainContent.getBoundingClientRect().top <= 0;
+      setIsVisible(hasReachedMainContent);
+      setScrolled(hasReachedMainContent);
+    };
+
+    updateHomeNavigation();
+    window.addEventListener("resize", updateHomeNavigation);
+    return () => window.removeEventListener("resize", updateHomeNavigation);
+  }, [pathname]);
+
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 40);
+    if (pathname === "/") {
+      // The storyboard length changes with content and viewport size, so use
+      // the main content boundary instead of a fixed number of viewports.
+      const mainContent = document.getElementById("home-main");
+      const hasReachedMainContent = mainContent
+        ? mainContent.getBoundingClientRect().top <= 0
+        : false;
+
+      setIsVisible(hasReachedMainContent);
+      setScrolled(hasReachedMainContent);
+    } else {
+      // Standard behavior for other pages
+      setIsVisible(true);
+      setScrolled(latest > 40);
+    }
   });
 
   // Hide on auth pages
@@ -38,9 +71,10 @@ export function NewNavbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${showSolid
-          ? "bg-rsa-black/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${!isVisible && pathname === "/" ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100"
+          } ${showSolid
+            ? "bg-rsa-black/95 backdrop-blur-md shadow-sm"
+            : "bg-transparent"
           }`}
       >
         <div className="max-w-360 mx-auto flex items-center justify-between px-6 md:px-10 lg:px-14 h-[72px]">

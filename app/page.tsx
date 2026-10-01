@@ -1,3 +1,4 @@
+import StoryboardSection from "@/components/home/StoryboardSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ConnectionSection } from "@/components/home/ConnectionSection";
 import { SkildustrySection } from "@/components/home/SkildustrySection";
@@ -12,18 +13,27 @@ import { NewFooter } from "@/components/NewFooter";
 
 export default function Home() {
   return (
-    <>
-      <HeroSection />
-      <ConnectionSection />
-      <SkildustrySection />
-      <RSAStandardSection />
-      <WhatToBuildSection />
-      <IDiceSouthEastSection />
-      <BuildOpportunitySection />
-      <ProductivityPipelineSection />
-      <ProofSection />
-      <FutureCTASection />
-      {/* <NewFooter /> */}
-    </>
+    <main className="bg-rsa-black">
+      <StoryboardSection>
+        {/* This foreground layer scrolls over the final sticky storyboard frame. */}
+        <div id="home-main" className="relative z-10 w-full bg-rsa-black shadow-[0_-24px_50px_rgba(0,0,0,0.35)]">
+          <HeroSection />
+
+          {/* 3. The rest of the site */}
+          <div className="relative z-20 w-full bg-background">
+            <ConnectionSection />
+            <SkildustrySection />
+            <RSAStandardSection />
+            <WhatToBuildSection />
+            <IDiceSouthEastSection />
+            <BuildOpportunitySection />
+            <ProductivityPipelineSection />
+            <ProofSection />
+            <FutureCTASection />
+            {/* <NewFooter /> */}
+          </div>
+        </div>
+      </StoryboardSection>
+    </main>
   );
 }

@@ -42,7 +42,7 @@ export function BuildOpportunitySection() {
 
           {/* Middle: Text and Button */}
           <div className="lg:w-[22%] pt-6 lg:pt-8 shrink-0">
-            <p className="text-rsa-gray-500 text-[14px] leading-relaxed font-medium max-w-[420px]">
+            <p className="text-rsa-gray-500 text-[14px] leading-relaxed font-medium max-w-105">
               RSA works with governments, industry, and international partners to build demand-led pathways, connecting African capability to productive opportunity.
             </p>
             <RedButton href="/partner-with-us" variant="outline" className="text-rsa-red! border-transparent! hover:bg-transparent! hover:text-rsa-red-dark! px-0 py-0 text-[13px]!">

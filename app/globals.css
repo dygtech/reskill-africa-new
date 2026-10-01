@@ -76,6 +76,15 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Applied only while the homepage storyboard is mounted. */
+html.storyboard-snap {
+  scroll-snap-type: y mandatory;
+}
+
+html.storyboard-snap.storyboard-transition {
+  scroll-snap-type: none;
+}
+
 /* ═══════ Animations ═══════ */
 
 @keyframes fade-in-up {
