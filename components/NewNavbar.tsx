@@ -19,10 +19,26 @@ export function NewNavbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const { scrollY } = useScroll();
+
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 40);
+    if (pathname === "/") {
+      // On the home page, the storyboard is 700vh.
+      // So the HeroSection reaches the top at scrollY = window.innerHeight * 7
+      const heroTop = typeof window !== "undefined" ? window.innerHeight * 7 : 0;
+
+      // Nav becomes visible once the main page reaches the top
+      setIsVisible(latest >= heroTop - 5); // 5px buffer
+
+      // Background becomes solid 10px after the nav comes in
+      setScrolled(latest > heroTop + 10);
+    } else {
+      // Standard behavior for other pages
+      setIsVisible(true);
+      setScrolled(latest > 40);
+    }
   });
 
   // Hide on auth pages
@@ -38,9 +54,10 @@ export function NewNavbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${showSolid
-          ? "bg-rsa-black/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${!isVisible && pathname === "/" ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100"
+          } ${showSolid
+            ? "bg-rsa-black/95 backdrop-blur-md shadow-sm"
+            : "bg-transparent"
           }`}
       >
         <div className="max-w-360 mx-auto flex items-center justify-between px-6 md:px-10 lg:px-14 h-[72px]">

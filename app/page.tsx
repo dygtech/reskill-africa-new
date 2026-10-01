@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/home/HeroSection";
+import StoryboardSection from "@/components/home/StoryboardSection";
 import { ConnectionSection } from "@/components/home/ConnectionSection";
 import { SkildustrySection } from "@/components/home/SkildustrySection";
 import { RSAStandardSection } from "@/components/home/RSAStandardSection";
@@ -13,7 +13,9 @@ import { NewFooter } from "@/components/NewFooter";
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      {/* StoryboardSection now internally handles HeroSection to ensure a perfectly seamless crossfade */}
+      <StoryboardSection />
+      
       <ConnectionSection />
       <SkildustrySection />
       <RSAStandardSection />
