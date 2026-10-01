@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -23,17 +23,34 @@ export function NewNavbar() {
 
   const { scrollY } = useScroll();
 
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const updateHomeNavigation = () => {
+      const mainContent = document.getElementById("home-main");
+      if (!mainContent) return;
+
+      const hasReachedMainContent = mainContent.getBoundingClientRect().top <= 0;
+      setIsVisible(hasReachedMainContent);
+      setScrolled(hasReachedMainContent);
+    };
+
+    updateHomeNavigation();
+    window.addEventListener("resize", updateHomeNavigation);
+    return () => window.removeEventListener("resize", updateHomeNavigation);
+  }, [pathname]);
+
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (pathname === "/") {
-      // On the home page, the storyboard is 700vh.
-      // So the HeroSection reaches the top at scrollY = window.innerHeight * 7
-      const heroTop = typeof window !== "undefined" ? window.innerHeight * 7 : 0;
+      // The storyboard length changes with content and viewport size, so use
+      // the main content boundary instead of a fixed number of viewports.
+      const mainContent = document.getElementById("home-main");
+      const hasReachedMainContent = mainContent
+        ? mainContent.getBoundingClientRect().top <= 0
+        : false;
 
-      // Nav becomes visible once the main page reaches the top
-      setIsVisible(latest >= heroTop - 5); // 5px buffer
-
-      // Background becomes solid 10px after the nav comes in
-      setScrolled(latest > heroTop + 10);
+      setIsVisible(hasReachedMainContent);
+      setScrolled(hasReachedMainContent);
     } else {
       // Standard behavior for other pages
       setIsVisible(true);

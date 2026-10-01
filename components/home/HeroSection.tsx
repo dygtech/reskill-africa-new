@@ -5,7 +5,7 @@ import { RedButton } from "@/components/ui/SharedUI";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full flex flex-col justify-center overflow-hidden bg-rsa-black">
+    <section className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden bg-rsa-black">
       {/* Background Image */}
       <Image
         src="/images/home-hero-new.png"
