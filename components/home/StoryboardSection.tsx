@@ -36,12 +36,17 @@ export default function StoryboardSection({ children }: { children: ReactNode })
 
       {/* FRAME 01 & 02: Initial Ink Drop */}
       <section className="snap-start snap-always relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        <a
-          href="#home-main"
-          className="absolute right-6 top-6 z-50 font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1A1A1A]/70 transition-opacity hover:text-[#1A1A1A] md:right-12 md:top-10"
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            // Force the transition class to disable snapping before the scroll
+            document.documentElement.classList.add('storyboard-transition');
+            document.getElementById('home-main')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="absolute right-6 top-6 z-50 font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1A1A1A]/70 transition-opacity hover:text-[#1A1A1A] md:right-12 md:top-10 cursor-pointer"
         >
           Skip intro ↓
-        </a>
+        </button>
         {/* Scroller Indicator */}
         <motion.div
           initial="hidden"
