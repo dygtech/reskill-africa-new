@@ -12,6 +12,7 @@ export function ProofSection() {
           src="/images/proof.png"
           alt="Construction worker"
           fill
+          sizes="100vw"
           className="object-cover object-[center_30%]"
         />
       </div>

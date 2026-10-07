@@ -33,6 +33,7 @@ export function PartnersSection() {
                                     src={partner.src}
                                     alt={`${partner.name} Logo`}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 140px"
                                     className="object-contain"
                                 />
                             </div>

@@ -79,6 +79,7 @@ export function VisionSection() {
                                     src={card.img}
                                     alt={card.label}
                                     fill
+                                    sizes="(max-width: 768px) 50vw, 25vw"
                                     className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
                                 />
                                 {/* Gradient overlay */}
