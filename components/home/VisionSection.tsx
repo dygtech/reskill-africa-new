@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { User, Layers, BarChart2, ArrowRight } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SharedUI";
 
@@ -56,10 +57,10 @@ export function VisionSection() {
                     </div>
 
                     {/* Button */}
-                    <button className="mt-2 group flex items-center justify-between w-full max-w-sm px-6 py-5 border border-white/20 hover:border-white/50 transition-colors">
+                    <Link href="/partner-with-us" className="mt-2 group flex items-center justify-between w-full max-w-sm px-6 py-5 border border-white/20 hover:border-white/50 transition-colors">
                         <span className="text-[11px] font-bold tracking-[0.15em] uppercase">BUILD SOMETHING MAGNIFICENT</span>
                         <ArrowRight className="w-4 h-4 text-rsa-red group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Right Column */}
