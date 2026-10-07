@@ -29,7 +29,7 @@ export function FutureCTASection() {
 
         {/* Top Content */}
         <div>
-          <SectionLabel number="11" className="!text-white/60 !border-rsa-red">THE FUTURE</SectionLabel>
+          <SectionLabel number="12" className="!text-white/60 !border-rsa-red">THE FUTURE</SectionLabel>
 
           <h2 className="text-white text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-bold leading-[1.05] tracking-[-0.03em] mb-4 mt-6">
             The future of work will be global.<br />

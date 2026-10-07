@@ -9,6 +9,7 @@ import { BuildOpportunitySection } from "@/components/home/BuildOpportunitySecti
 import { ProductivityPipelineSection } from "@/components/home/ProductivityPipelineSection";
 import { ProofSection } from "@/components/home/ProofSection";
 import { VisionSection } from "@/components/home/VisionSection";
+import { PartnersSection } from "@/components/home/PartnersSection";
 import { FutureCTASection } from "@/components/home/FutureCTASection";
 import { NewFooter } from "@/components/NewFooter";
 
@@ -31,6 +32,7 @@ export default function Home() {
             <ProductivityPipelineSection />
             <ProofSection />
             <VisionSection />
+            <PartnersSection />
             <FutureCTASection />
             {/* <NewFooter /> */}
           </div>
