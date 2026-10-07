@@ -8,6 +8,7 @@ import { IDiceSouthEastSection } from "@/components/home/IDiceSouthEastSection";
 import { BuildOpportunitySection } from "@/components/home/BuildOpportunitySection";
 import { ProductivityPipelineSection } from "@/components/home/ProductivityPipelineSection";
 import { ProofSection } from "@/components/home/ProofSection";
+import { VisionSection } from "@/components/home/VisionSection";
 import { FutureCTASection } from "@/components/home/FutureCTASection";
 import { NewFooter } from "@/components/NewFooter";
 
@@ -29,6 +30,7 @@ export default function Home() {
             <BuildOpportunitySection />
             <ProductivityPipelineSection />
             <ProofSection />
+            <VisionSection />
             <FutureCTASection />
             {/* <NewFooter /> */}
           </div>
