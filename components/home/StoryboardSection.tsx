@@ -307,7 +307,7 @@ export default function StoryboardSection({ children }: { children: ReactNode })
             T H I S &nbsp;&nbsp;&nbsp; I S
           </p>
           <h2 className="text-5xl md:text-6xl lg:text-[7rem] leading-[1] text-[#1A1A1A] font-serif tracking-tight">
-            SKILLDUSTRY.
+            SKILDUSTRY.
           </h2>
           <motion.div
             variants={{
