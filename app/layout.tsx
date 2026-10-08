@@ -15,6 +15,16 @@ import { Preloader } from "@/components/Preloader";
 export const metadata: Metadata = {
   title: "Re-Skill Africa",
   description: "Re-Skill Africa Platform",
+  icons: {
+    icon: [
+      { url: '/images/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/favicon/apple-touch-icon.png' }
+    ],
+  },
+  manifest: '/images/favicon/site.webmanifest',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
