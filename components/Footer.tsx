@@ -100,8 +100,8 @@ export function Footer({
             </a>
             <address className="text-white/80 text-sm font-light not-italic mt-2 leading-relaxed">
               Re-Skill Africa Headquarters<br />
-              3B Sapara Williams Close, Victoria Island<br />
-              Lagos, Nigeria
+              Plot 14B, Ligali Ayorinde Street<br />
+              Victoria Island, Lagos, Nigeria.
             </address>
           </div>
 
